@@ -14,147 +14,163 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<bblocks://ogc.bbr.template.myFeature> a skos:Concept,
+<bblocks://ogc.crdwg.ev-observation> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
         bblocks:Schema ;
-    rdfs:label "Custom Feature" ;
-    dct:abstract "This examples shows a simple customisation for OGC API Feature schemas"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks-template/bblock/ogc.bbr.template.myFeature> ],
+    rdfs:label "Essential Variable Observation" ;
+    dct:abstract "A SOSA Observation Feature whose observedProperty is constrained to a CRDWG Essential Variable."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-05-27T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/generateddocs/json-full/crdwg/ev-observation/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks-template/build/generateddocs/markdown/bbr/template/myFeature/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks-template/build/generateddocs/json-full/bbr/template/myFeature/index.json> ] ;
-    dct:hasVersion "1.0" ;
-    dct:modified "2023-05-19"^^xsd:date ;
-    dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
-    skos:inScheme <https://opengeospatial.github.io/bblocks-template/> ;
-    skos:prefLabel "Custom Feature" ;
-    skos:topConceptOf <https://opengeospatial.github.io/bblocks-template/> ;
-    dcat:keyword "examples",
-        "feature" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/context.jsonld> ;
-            prof:hasRole role:mapping ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/myFeature/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/generateddocs/markdown/crdwg/ev-observation/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/bblock/ogc.crdwg.ev-observation> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-27"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-helsinki-crdwg/> ;
+    skos:prefLabel "Essential Variable Observation" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-helsinki-crdwg/> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.template.mySchema> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
-    bblocks:dependsOn <bblocks://ogc.bbr.template.mySchema>,
-        <bblocks://ogc.geo.features.feature> ;
+            rdfs:seeAlso <bblocks://ogc.sosa.properties.observation> ;
+            prof:hasArtifact <https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.crdwg.ev-schema>,
+        <bblocks://ogc.sosa.features.observation> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-helsinki-crdwg/_sources/ev-observation/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> rdfs:label "OGC API - Features, Part 1, 7.16.2: Feature Response" .
+<bblocks://ogc.crdwg.ev-ontology> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Model ;
+    rdfs:label "Essential Variable Ontology" ;
+    dct:abstract "OWL ontology defining vocabulary terms for Essential Variable descriptions that are not covered by standard vocabularies."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-05-27T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/generateddocs/json-full/crdwg/ev-ontology/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/generateddocs/markdown/crdwg/ev-ontology/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/bblock/ogc.crdwg.ev-ontology> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-05-27"^^xsd:date ;
+    dct:source <https://gcos.wmo.int/en/essential-climate-variables> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-helsinki-crdwg/> ;
+    skos:prefLabel "Essential Variable Ontology" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-helsinki-crdwg/> ;
+    prof:hasResource [ dct:conformsTo owl:Ontology ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-ontology/ontology.ttl> ;
+            prof:hasRole role:specification ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://example.com/sources/1> rdfs:label "Sample source document" .
-
-<https://opengeospatial.github.io/bblocks-template/build/bblocks.ttl> a prov:Entity ;
+<https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N9e9ccc65c76441ceaeed171c5748f805 ;
+    prov:wasAttributedTo _:Nef457489c8f649849c765c17f298e4f8 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-05-07T11:37:22.848261"^^xsd:dateTime ;
-            prov:startedAtTime "2026-05-07T11:37:22.650139"^^xsd:dateTime ;
+            prov:endedAtTime "2026-05-27T18:19:39.348604"^^xsd:dateTime ;
+            prov:startedAtTime "2026-05-27T18:19:39.243068"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-                [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:9b7d95390a30fead2bf9fc1d55d5e6a660580737" ;
-                    rdfs:seeAlso <https://opengeospatial.github.io/bblocks-template/build/register.json> ] ;
-            prov:wasAssociatedWith _:N9e9ccc65c76441ceaeed171c5748f805 ] .
+                    dct:hasVersion "git:b33343890a57291d2120dea8059c74b5b082c172" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:Nef457489c8f649849c765c17f298e4f8 ] .
 
-<bblocks://ogc.bbr.template.mySchema> a skos:Concept,
+<bblocks://ogc.crdwg.ev-schema> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
         bblocks:Schema ;
-    rdfs:label "My Schema" ;
-    dct:abstract "An example schema defining the set of properties of any type of object."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks-template/build/generateddocs/json-full/bbr/template/mySchema/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks-template/build/generateddocs/markdown/bbr/template/mySchema/index.md> ],
+    rdfs:label "Essential Variable" ;
+    dct:abstract "Schema and JSON-LD context for defining a Climate Resilience Essential Variable."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2026-05-27T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/generateddocs/markdown/crdwg/ev-schema/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://opengeospatial.github.io/bblocks-template/bblock/ogc.bbr.template.mySchema> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/bblock/ogc.crdwg.ev-schema> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/generateddocs/json-full/crdwg/ev-schema/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2023-04-05"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
-    skos:inScheme <https://opengeospatial.github.io/bblocks-template/> ;
-    skos:prefLabel "My Schema" ;
-    skos:topConceptOf <https://opengeospatial.github.io/bblocks-template/> ;
-    dcat:keyword "templates" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    dct:modified "2026-05-27"^^xsd:date ;
+    dct:source <https://gcos.wmo.int/en/essential-climate-variables> ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-helsinki-crdwg/> ;
+    skos:prefLabel "Essential Variable" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-helsinki-crdwg/> ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/context.jsonld> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks-template/build/annotated/bbr/template/mySchema/schema.yaml> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.json> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.template.mySchema> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks-template/_sources/mySchema/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
-    bblocks:hasSourceJsonLdContext <https://opengeospatial.github.io/bblocks-template/_sources/mySchema/context.jsonld> ;
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-helsinki-crdwg/_sources/ev-schema/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<https://opengeospatial.github.io/bblocks-template/> a skos:ConceptScheme,
+<https://gcos.wmo.int/en/essential-climate-variables> rdfs:label "GCOS Essential Climate Variables" .
+
+<https://ogcincubator.github.io/bblocks-helsinki-crdwg/> a skos:ConceptScheme,
         dcat:Catalog,
         bblocks:BBlocksRegister ;
-    rdfs:label "Building Blocks - My OGC Building Blocks repository" ;
-    dct:abstract """This is an example text for the abstract. It should be short and to the point.
-A "Tell me more" link will appear if there is an additional description with a longer explanation.
+    rdfs:label "Building Blocks - OGC CRDWG Essential Variable Blocks" ;
+    dct:abstract """OGC Building Blocks for the Climate Resilience Domain Working Group (CRDWG)
+Essential Variable registry. Provides schema, semantics, and ontology for
+describing and publishing Essential Climate Variables as linked data.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:description """The description can be longer. Both **the abstract** *and the description* support Markdown,
-including [links](https://google.es).
-"""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-05-07T11:37:21.546445"^^xsd:dateTime ;
-    owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
-    skos:hasTopConcept <bblocks://ogc.bbr.template.myFeature>,
-        <bblocks://ogc.bbr.template.mySchema> ;
-    skos:prefLabel "Building Blocks - My OGC Building Blocks repository" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
-            dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://opengeospatial.github.io/bblocks-template/build/register.json> ],
-        [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
+    dct:modified "2026-05-27T18:19:36.792846"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json>,
+        <https://opengeospatial.github.io/ogcapi-sosa/build/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.crdwg.ev-observation>,
+        <bblocks://ogc.crdwg.ev-ontology>,
+        <bblocks://ogc.crdwg.ev-schema> ;
+    skos:prefLabel "Building Blocks - OGC CRDWG Essential Variable Blocks" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
             ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://opengeospatial.github.io/bblocks-template/build/bblocks.jsonld> ],
+            ns2:hasTarget <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/bblocks.jsonld> ],
         [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
             ns1:relation <http://www.iana.org/assignments/relation/self> ;
-            ns2:hasTarget <https://opengeospatial.github.io/bblocks-template/build/bblocks.ttl> ] ;
-    foaf:homepage <https://opengeospatial.github.io/bblocks-template/> ;
-    bblocks:hasValidationReport <https://opengeospatial.github.io/bblocks-template/build/tests/report.html> .
+            ns2:hasTarget <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/bblocks.ttl> ],
+        [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/self> ;
+            ns2:hasTarget <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/register.json> ] ;
+    foaf:homepage <https://ogcincubator.github.io/bblocks-helsinki-crdwg/> ;
+    bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/report.html> .
 
-_:N9e9ccc65c76441ceaeed171c5748f805 a prov:Agent,
+_:Nef457489c8f649849c765c17f298e4f8 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.5.28" ;
+    dct:hasVersion "0.5.29" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

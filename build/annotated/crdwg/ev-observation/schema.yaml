@@ -1,0 +1,9 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Observation of a Climate Resilience Essential Variable
+allOf:
+- $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml
+properties:
+  properties:
+    properties:
+      observedProperty:
+        $ref: https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml

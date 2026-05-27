@@ -1,0 +1,27 @@
+
+
+{
+  "itemIdentifier": "ogc.crdwg.ev-ontology",
+  "name": "Essential Variable Ontology",
+  "abstract": "OWL ontology defining vocabulary terms for Essential Variable descriptions that are not covered by standard vocabularies.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-27T00:00:00Z",
+  "itemClass": "model",
+  "register": "bblocks-helsinki-crdwg",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-27",
+  "sources": [
+    {
+      "title": "GCOS Essential Climate Variables",
+      "link": "https://gcos.wmo.int/en/essential-climate-variables"
+    }
+  ],
+  "shaclShapes": {},
+  "ontology": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-ontology/ontology.ttl",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/_sources/ev-ontology/",
+  "validationPassed": true,
+  "description": "## Essential Variable Ontology\n\nThis ontology defines the OWL properties and SKOS code list used to describe\nEssential Variables (EVs) in the CRDWG registry. It covers only terms that\nhave no adequate equivalent in widely-adopted standard vocabularies.\n\n### Why a custom ontology?\n\nStandard vocabularies cover most needs:\n\n- `skos:prefLabel` / `skos:definition` / `skos:notation` \u2014 human-readable\n  labels, definitions, and authority codes.\n- `skos:related` \u2014 links between related EVs.\n- `qudt:unit` \u2014 physical units of measurement.\n- `dct:*` \u2014 provenance and bibliographic metadata.\n\nHowever, three concepts specific to the EV registry have no standard home:\n\n| Term | Why not standard |\n|------|-----------------|\n| `ev:standardAuthority` | The body mandating a variable (GCOS, GOOS, GEO BON) has no direct equivalent in SKOS, PROV, or DublinCore that captures the \"mandating body\" relationship rather than a general creator/publisher. |\n| `ev:evDomain` | The Earth-system domain partition (Atmosphere, Land, Ocean, Cryosphere, Biosphere) is specific to the EV community and not covered by CF conventions or existing environmental ontologies at the required granularity. |\n| `ev:measurementTypes` | The classification of measurement approaches (in-situ, remote sensing, reanalysis) as a controlled code list is unique to the EV community. |\n\n### Measurement Type code list\n\n`ev:MeasurementTypeScheme` is a `skos:ConceptScheme` with three concepts:\n\n- `ev-mt:InSitu` \u2014 ground-based or in-water direct measurements.\n- `ev-mt:RemoteSensing` \u2014 satellite or airborne observations.\n- `ev-mt:Reanalysis` \u2014 model-based reconstructions blending observations\n  with numerical weather prediction.\n",
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/bblocks-helsinki-crdwg",
+  "gitPath": "_sources/ev-ontology"
+}

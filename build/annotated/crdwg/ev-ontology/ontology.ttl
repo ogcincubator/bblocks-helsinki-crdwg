@@ -1,0 +1,50 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ev: <https://w3id.org/ogc/crdwg/ev/> .
+@prefix ev-mt: <https://w3id.org/ogc/crdwg/ev/measurementType/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ev:catalog a dcat:Catalog ;
+    dct:title "Climate Resilience EV Vocabulary" ;
+    dcat:hasPart ev:MeasurementTypeScheme,
+        ev:ontology .
+
+ev:evDomain a owl:ObjectProperty ;
+    rdfs:isDefinedBy ev:ontology ;
+    skos:definition "Earth system domain: Atmosphere, Land, Ocean, Cryosphere, or Biosphere."@en ;
+    skos:prefLabel "EV domain"@en .
+
+ev-mt:InSitu a skos:Concept ;
+    skos:inScheme ev:MeasurementTypeScheme ;
+    skos:notation "in-situ" ;
+    skos:prefLabel "in-situ"@en .
+
+ev-mt:Reanalysis a skos:Concept ;
+    skos:inScheme ev:MeasurementTypeScheme ;
+    skos:notation "reanalysis" ;
+    skos:prefLabel "reanalysis"@en .
+
+ev-mt:RemoteSensing a skos:Concept ;
+    skos:inScheme ev:MeasurementTypeScheme ;
+    skos:notation "remote-sensing" ;
+    skos:prefLabel "remote sensing"@en .
+
+ev:measurementTypes a owl:ObjectProperty ;
+    rdfs:isDefinedBy ev:ontology ;
+    rdfs:range ev:MeasurementType ;
+    skos:definition "Approaches by which the variable is typically measured."@en ;
+    skos:prefLabel "measurement types"@en .
+
+ev:standardAuthority a owl:ObjectProperty ;
+    rdfs:isDefinedBy ev:ontology ;
+    skos:definition "Body mandating this variable (e.g. GCOS, GOOS, GEO BON)."@en ;
+    skos:prefLabel "standard authority"@en .
+
+ev:MeasurementTypeScheme a skos:ConceptScheme ;
+    skos:prefLabel "Measurement Type code list" .
+
+ev:ontology a owl:Ontology ;
+    rdfs:label "Essential Variable ontology" .
+

@@ -1,0 +1,46 @@
+
+
+{
+  "itemIdentifier": "ogc.crdwg.ev-schema",
+  "name": "Essential Variable",
+  "abstract": "Schema and JSON-LD context for defining a Climate Resilience Essential Variable.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-27T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bblocks-helsinki-crdwg",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-27",
+  "sources": [
+    {
+      "title": "GCOS Essential Climate Variables",
+      "link": "https://gcos.wmo.int/en/essential-climate-variables"
+    }
+  ],
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/_sources/ev-schema/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/_sources/ev-schema/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/resolvedProperties.json",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/_sources/ev-schema/",
+  "validationPassed": true,
+  "description": "## Essential Variable schema\n\nDefines the JSON structure for a single Essential Variable (EV) definition,\ntogether with a JSON-LD context that maps every field to a URI.\n\nA document conforming to this block may be either a single EV object or an\narray of EV objects (the `oneOf` at the root of the schema).\n\n### Required fields\n\n| Field | Mapped to | Notes |\n|-------|-----------|-------|\n| `id` | \u2014 (used as `@id`) | Compact URI, e.g. `ev:surface-air-temperature` |\n| `name` | `skos:prefLabel` | Human-readable label |\n| `code` | `skos:notation` | Authority code, e.g. `T2m` (GCOS) |\n| `domain` | `ev:evDomain` | One of the five Earth-system domains |\n| `standardAuthority` | `ev:standardAuthority` | Compact URI of the mandating body |\n\n### Optional fields\n\n| Field | Mapped to | Notes |\n|-------|-----------|-------|\n| `definition` | `skos:definition` | Prose definition |\n| `unit` | `qudt:unit` | QUDT unit compact URI, e.g. `qudt-unit:K` |\n| `measurementTypes` | `ev:measurementTypes` | Array of `in-situ`, `remote-sensing`, or `reanalysis` |\n| `related` | `skos:related` | Compact URIs of related EVs |\n\n### Semantic uplift\n\nThe JSON-LD context resolves compact URIs at uplift time:\n\n- `ev:surface-air-temperature` \u2192 `https://w3id.org/ogc/crdwg/ev/surface-air-temperature`\n- `ev:GCOS` \u2192 `https://w3id.org/ogc/crdwg/ev/GCOS`\n- `in-situ` (inside `measurementTypes`) \u2192 `https://w3id.org/ogc/crdwg/ev/measurementType/in-situ`\n- `qudt-unit:K` \u2192 `http://qudt.org/vocab/unit/K`\n",
+  "examples": [
+    {
+      "title": "Surface Air Temperature",
+      "content": "{\n  \"id\": \"ev:surface-air-temperature\",\n  \"name\": \"Surface Air Temperature\",\n  \"code\": \"T2m\",\n  \"definition\": \"Temperature of the air at 2 m above the surface.\",\n  \"domain\": \"Atmosphere\",\n  \"standardAuthority\": \"ev:GCOS\",\n  \"unit\": \"qudt-unit:K\",\n  \"measurementTypes\": [\"in-situ\", \"remote-sensing\", \"reanalysis\"],\n  \"related\": [\"ev:precipitation\", \"ev:soil-moisture\", \"ev:sea-level\"]\n}\n",
+      "base-uri": "https://w3id.org/ogc/crdwg/"
+    },
+    {
+      "title": "All four EVs (array form)",
+      "content": "[\n  {\n    \"id\": \"ev:surface-air-temperature\",\n    \"name\": \"Surface Air Temperature\",\n    \"code\": \"T2m\",\n    \"domain\": \"Atmosphere\",\n    \"standardAuthority\": \"ev:GCOS\",\n    \"unit\": \"qudt-unit:K\",\n    \"measurementTypes\": [\"in-situ\", \"remote-sensing\", \"reanalysis\"],\n    \"related\": [\"ev:precipitation\", \"ev:soil-moisture\", \"ev:sea-level\"]\n  },\n  {\n    \"id\": \"ev:precipitation\",\n    \"name\": \"Precipitation\",\n    \"code\": \"P\",\n    \"domain\": \"Atmosphere\",\n    \"standardAuthority\": \"ev:GCOS\",\n    \"unit\": \"qudt-unit:MilliM\",\n    \"measurementTypes\": [\"in-situ\", \"remote-sensing\", \"reanalysis\"],\n    \"related\": [\"ev:surface-air-temperature\", \"ev:soil-moisture\"]\n  },\n  {\n    \"id\": \"ev:soil-moisture\",\n    \"name\": \"Soil Moisture\",\n    \"code\": \"SM\",\n    \"domain\": \"Land\",\n    \"standardAuthority\": \"ev:GCOS\",\n    \"measurementTypes\": [\"in-situ\", \"remote-sensing\"],\n    \"related\": [\"ev:precipitation\", \"ev:surface-air-temperature\"]\n  },\n  {\n    \"id\": \"ev:sea-level\",\n    \"name\": \"Sea Level\",\n    \"code\": \"SL\",\n    \"domain\": \"Ocean\",\n    \"standardAuthority\": \"ev:GCOS\",\n    \"unit\": \"qudt-unit:M\",\n    \"measurementTypes\": [\"in-situ\", \"remote-sensing\"],\n    \"related\": [\"ev:surface-air-temperature\"]\n  }\n]\n",
+      "base-uri": "https://w3id.org/ogc/crdwg/"
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Essential Variable definition\n$defs:\n  EssentialVariable:\n    type: object\n    required:\n    - id\n    - name\n    - code\n    - domain\n    - standardAuthority\n    properties:\n      id:\n        type: string\n        description: Compact URI for this variable, e.g. ev:surface-air-temperature\n      name:\n        type: string\n        x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel\n      code:\n        type: string\n        description: Authority code, e.g. T2m (GCOS)\n        x-jsonld-id: http://www.w3.org/2004/02/skos/core#notation\n      definition:\n        type: string\n        x-jsonld-id: http://www.w3.org/2004/02/skos/core#definition\n      domain:\n        type: string\n        enum:\n        - Atmosphere\n        - Land\n        - Ocean\n        - Cryosphere\n        - Biosphere\n        x-jsonld-id: https://w3id.org/ogc/crdwg/ev/evDomain\n        x-jsonld-type: '@id'\n      standardAuthority:\n        type: string\n        description: Compact URI of the body mandating this variable, e.g. ev:GCOS\n        x-jsonld-id: https://w3id.org/ogc/crdwg/ev/standardAuthority\n        x-jsonld-type: '@id'\n      unit:\n        type: string\n        description: QUDT unit compact URI, e.g. qudt-unit:K\n        x-jsonld-id: http://qudt.org/schema/qudt/unit\n        x-jsonld-type: '@id'\n      measurementTypes:\n        type: array\n        items:\n          type: string\n          enum:\n          - in-situ\n          - remote-sensing\n          - reanalysis\n        x-jsonld-id: https://w3id.org/ogc/crdwg/ev/measurementTypes\n        x-jsonld-type: '@id'\n        x-jsonld-base: https://w3id.org/ogc/crdwg/ev/measurementType/\n      related:\n        type: array\n        items:\n          type: string\n          description: Compact URIs of related EVs\n        x-jsonld-id: http://www.w3.org/2004/02/skos/core#related\n        x-jsonld-type: '@id'\noneOf:\n- $ref: '#/$defs/EssentialVariable'\n- type: array\n  items:\n    $ref: '#/$defs/EssentialVariable'\nx-jsonld-prefixes:\n  skos: http://www.w3.org/2004/02/skos/core#\n  qudt: http://qudt.org/schema/qudt/\n  ev: https://w3id.org/ogc/crdwg/ev/\n  qudt-unit: http://qudt.org/vocab/unit/\n  dct: http://purl.org/dc/terms/\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-helsinki-crdwg",
+  "gitPath": "_sources/ev-schema"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.crdwg.ev-schema - Essential Variable",
+  "bblockName": "Essential Variable",
+  "bblockId": "ogc.crdwg.ev-schema",
+  "generated": "2026-05-27T18:19:39.113483+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

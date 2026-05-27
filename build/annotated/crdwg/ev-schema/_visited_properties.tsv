@@ -1,0 +1,10 @@
+path	@id	schema
+/_oneOf/0/id		/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
+/_oneOf/0/name	http://www.w3.org/2004/02/skos/core#prefLabel	/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
+/_oneOf/0/code	http://www.w3.org/2004/02/skos/core#notation	/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
+/_oneOf/0/definition	http://www.w3.org/2004/02/skos/core#definition	/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
+/_oneOf/0/domain	https://w3id.org/ogc/crdwg/ev/evDomain	/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
+/_oneOf/0/standardAuthority	https://w3id.org/ogc/crdwg/ev/standardAuthority	/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
+/_oneOf/0/unit	http://qudt.org/schema/qudt/unit	/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
+/_oneOf/0/measurementTypes	https://w3id.org/ogc/crdwg/ev/measurementTypes	/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
+/_oneOf/0/related	http://www.w3.org/2004/02/skos/core#related	/github/workspace/build/annotated/crdwg/ev-schema/schema.yaml
