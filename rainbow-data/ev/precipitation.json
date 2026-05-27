@@ -1,0 +1,11 @@
+{
+  "id": "ev:precipitation",
+  "name": "Precipitation",
+  "code": "P",
+  "definition": "Liquid or solid water falling from the atmosphere to the Earth's surface, a key driver of freshwater availability, flood risk, and ecosystem productivity.",
+  "domain": "Atmosphere",
+  "standardAuthority": "ev:GCOS",
+  "unit": "qudt-unit:MilliM",
+  "measurementTypes": ["in-situ", "remote-sensing", "reanalysis"],
+  "related": ["ev:surface-air-temperature", "ev:soil-moisture"]
+}

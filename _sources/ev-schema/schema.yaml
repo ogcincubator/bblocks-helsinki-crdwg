@@ -1,0 +1,54 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Essential Variable definition
+$defs:
+  EssentialVariable:
+    type: object
+    required:
+      - id
+      - name
+      - code
+      - domain
+      - standardAuthority
+    properties:
+      id:
+        type: string
+        description: "Compact URI for this variable, e.g. ev:surface-air-temperature"
+      name:
+        type: string
+      code:
+        type: string
+        description: "Authority code, e.g. T2m (GCOS)"
+      definition:
+        type: string
+      domain:
+        type: string
+        enum:
+          - Atmosphere
+          - Land
+          - Ocean
+          - Cryosphere
+          - Biosphere
+      standardAuthority:
+        type: string
+        description: "Compact URI of the body mandating this variable, e.g. ev:GCOS"
+      unit:
+        type: string
+        description: "QUDT unit compact URI, e.g. qudt-unit:K"
+      measurementTypes:
+        type: array
+        items:
+          type: string
+          enum:
+            - in-situ
+            - remote-sensing
+            - reanalysis
+      related:
+        type: array
+        items:
+          type: string
+          description: "Compact URIs of related EVs"
+oneOf:
+  - $ref: '#/$defs/EssentialVariable'
+  - type: array
+    items:
+      $ref: '#/$defs/EssentialVariable'

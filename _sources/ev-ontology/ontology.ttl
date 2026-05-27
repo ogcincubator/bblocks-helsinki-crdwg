@@ -1,0 +1,54 @@
+@prefix ev:    <https://w3id.org/ogc/crdwg/ev/> .
+@prefix ev-mt: <https://w3id.org/ogc/crdwg/ev/measurementType/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+
+# Catalog grouping the ontology and the measurement type code list
+<https://w3id.org/ogc/crdwg/ev/catalog>
+    a dcat:Catalog ;
+    dct:title "Climate Resilience EV Vocabulary" ;
+    dcat:hasPart ev:ontology, ev:MeasurementTypeScheme .
+
+# The ontology itself
+ev:ontology a owl:Ontology ;
+    rdfs:label "Essential Variable ontology" .
+
+# Properties — each linked back to the ontology via rdfs:isDefinedBy
+
+ev:standardAuthority a owl:ObjectProperty ;
+    rdfs:isDefinedBy ev:ontology ;
+    skos:prefLabel "standard authority"@en ;
+    skos:definition "Body mandating this variable (e.g. GCOS, GOOS, GEO BON)."@en .
+
+ev:evDomain a owl:ObjectProperty ;
+    rdfs:isDefinedBy ev:ontology ;
+    skos:prefLabel "EV domain"@en ;
+    skos:definition "Earth system domain: Atmosphere, Land, Ocean, Cryosphere, or Biosphere."@en .
+
+ev:measurementTypes a owl:ObjectProperty ;
+    rdfs:isDefinedBy ev:ontology ;
+    skos:prefLabel "measurement types"@en ;
+    skos:definition "Approaches by which the variable is typically measured."@en ;
+    rdfs:range ev:MeasurementType .
+
+# Code list for measurement type values
+ev:MeasurementTypeScheme a skos:ConceptScheme ;
+    skos:prefLabel "Measurement Type code list" .
+
+ev-mt:InSitu a skos:Concept ;
+    skos:inScheme ev:MeasurementTypeScheme ;
+    skos:prefLabel "in-situ"@en ;
+    skos:notation "in-situ" .
+
+ev-mt:RemoteSensing a skos:Concept ;
+    skos:inScheme ev:MeasurementTypeScheme ;
+    skos:prefLabel "remote sensing"@en ;
+    skos:notation "remote-sensing" .
+
+ev-mt:Reanalysis a skos:Concept ;
+    skos:inScheme ev:MeasurementTypeScheme ;
+    skos:prefLabel "reanalysis"@en ;
+    skos:notation "reanalysis" .

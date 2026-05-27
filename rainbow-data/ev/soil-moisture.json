@@ -1,0 +1,10 @@
+{
+  "id": "ev:soil-moisture",
+  "name": "Soil Moisture",
+  "code": "SM",
+  "definition": "Water content of the soil, critical for agriculture, drought monitoring, flood forecasting, and land-atmosphere feedback in the climate system.",
+  "domain": "Land",
+  "standardAuthority": "ev:GCOS",
+  "measurementTypes": ["in-situ", "remote-sensing"],
+  "related": ["ev:precipitation", "ev:surface-air-temperature"]
+}

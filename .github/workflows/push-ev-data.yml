@@ -1,0 +1,26 @@
+name: Push EV data to Rainbow
+
+on:
+  workflow_dispatch:  # disabled: enable push trigger once Fuseki endpoint is configured
+
+jobs:
+  push-ev-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install "bblocks_client[all]" requests
+
+      - name: Validate, uplift and push
+        run: python rainbow-data/scripts/uplift_and_push.py rainbow-data/ev
+        env:
+          FUSEKI_URL:      ${{ vars.FUSEKI_URL }}
+          FUSEKI_DATASET:  ${{ vars.FUSEKI_DATASET }}
+          FUSEKI_PASSWORD: ${{ secrets.FUSEKI_PASSWORD }}
+          GRAPH_URI:       ${{ vars.EV_GRAPH_URI }}
+          BASE_URI:        https://w3id.org/ogc/crdwg/

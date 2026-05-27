@@ -1,0 +1,11 @@
+{
+  "id": "ev:sea-level",
+  "name": "Sea Level",
+  "code": "SL",
+  "definition": "Height of the ocean surface relative to a geodetic datum, an indicator of thermal expansion, ice sheet and glacier melt, and coastal flood hazard.",
+  "domain": "Ocean",
+  "standardAuthority": "ev:GCOS",
+  "unit": "qudt-unit:M",
+  "measurementTypes": ["in-situ", "remote-sensing"],
+  "related": ["ev:surface-air-temperature"]
+}

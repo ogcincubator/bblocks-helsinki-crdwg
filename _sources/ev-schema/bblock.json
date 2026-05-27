@@ -1,0 +1,16 @@
+{
+  "name": "Essential Variable",
+  "abstract": "Schema and JSON-LD context for defining a Climate Resilience Essential Variable.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-27T00:00:00Z",
+  "itemClass": "schema",
+  "register": "bblocks-helsinki-crdwg",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-27",
+  "sources": [
+    {
+      "title": "GCOS Essential Climate Variables",
+      "link": "https://gcos.wmo.int/en/essential-climate-variables"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+description: Observation of a Climate Resilience Essential Variable
+allOf:
+  - $ref: bblocks://ogc.sosa.features.observation
+properties:
+  properties:
+    properties:
+      observedProperty:
+        $ref: bblocks://ogc.crdwg.ev-schema

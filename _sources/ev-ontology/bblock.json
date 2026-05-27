@@ -1,0 +1,16 @@
+{
+  "name": "Essential Variable Ontology",
+  "abstract": "OWL ontology defining vocabulary terms for Essential Variable descriptions that are not covered by standard vocabularies.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-05-27T00:00:00Z",
+  "itemClass": "model",
+  "register": "bblocks-helsinki-crdwg",
+  "version": "0.1",
+  "dateOfLastChange": "2026-05-27",
+  "sources": [
+    {
+      "title": "GCOS Essential Climate Variables",
+      "link": "https://gcos.wmo.int/en/essential-climate-variables"
+    }
+  ]
+}
