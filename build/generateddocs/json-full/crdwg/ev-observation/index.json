@@ -19,8 +19,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.sosa.features.observation",
-    "ogc.crdwg.ev-schema"
+    "ogc.crdwg.ev-schema",
+    "ogc.sosa.features.observation"
   ],
   "ldContext": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld",
   "schema": {

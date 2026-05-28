@@ -160,7 +160,7 @@ path	@id	schema
 /properties/result		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
 /properties/result@links		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
 /properties/hasSimpleResult		https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/properties/observation-owa/schema.yaml
-/properties/observedProperty/_oneOf/1/_oneOf/0/id		https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml
+/properties/observedProperty/_oneOf/1/_oneOf/0/id	@id	https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml
 /properties/observedProperty/_oneOf/1/_oneOf/0/name	http://www.w3.org/2004/02/skos/core#prefLabel	https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml
 /properties/observedProperty/_oneOf/1/_oneOf/0/code	http://www.w3.org/2004/02/skos/core#notation	https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml
 /properties/observedProperty/_oneOf/1/_oneOf/0/definition	http://www.w3.org/2004/02/skos/core#definition	https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml

@@ -1,5 +1,6 @@
 {
   "@context": {
+    "id": "@id",
     "name": "skos:prefLabel",
     "code": "skos:notation",
     "definition": "skos:definition",

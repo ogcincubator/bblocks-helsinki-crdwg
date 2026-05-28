@@ -95,7 +95,7 @@ The JSON-LD context resolves compact URIs at uplift time:
 @prefix qudt-unit: <http://qudt.org/vocab/unit/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-[] qudt:unit qudt-unit:K ;
+ev:surface-air-temperature qudt:unit qudt-unit:K ;
     skos:definition "Temperature of the air at 2 m above the surface." ;
     skos:notation "T2m" ;
     skos:prefLabel "Surface Air Temperature" ;
@@ -240,28 +240,16 @@ The JSON-LD context resolves compact URIs at uplift time:
 @prefix qudt-unit: <http://qudt.org/vocab/unit/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-[] skos:notation "SM" ;
-    skos:prefLabel "Soil Moisture" ;
-    skos:related ev:precipitation,
-        ev:surface-air-temperature ;
-    ev:evDomain <https://w3id.org/ogc/crdwg/Land> ;
+ev:sea-level qudt:unit qudt-unit:M ;
+    skos:notation "SL" ;
+    skos:prefLabel "Sea Level" ;
+    skos:related ev:surface-air-temperature ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Ocean> ;
     ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
         <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
     ev:standardAuthority ev:GCOS .
 
-[] qudt:unit qudt-unit:K ;
-    skos:notation "T2m" ;
-    skos:prefLabel "Surface Air Temperature" ;
-    skos:related ev:precipitation,
-        ev:sea-level,
-        ev:soil-moisture ;
-    ev:evDomain <https://w3id.org/ogc/crdwg/Atmosphere> ;
-    ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
-        <https://w3id.org/ogc/crdwg/ev/measurementType/reanalysis>,
-        <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
-    ev:standardAuthority ev:GCOS .
-
-[] qudt:unit qudt-unit:MilliM ;
+ev:precipitation qudt:unit qudt-unit:MilliM ;
     skos:notation "P" ;
     skos:prefLabel "Precipitation" ;
     skos:related ev:soil-moisture,
@@ -272,12 +260,24 @@ The JSON-LD context resolves compact URIs at uplift time:
         <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
     ev:standardAuthority ev:GCOS .
 
-[] qudt:unit qudt-unit:M ;
-    skos:notation "SL" ;
-    skos:prefLabel "Sea Level" ;
-    skos:related ev:surface-air-temperature ;
-    ev:evDomain <https://w3id.org/ogc/crdwg/Ocean> ;
+ev:soil-moisture skos:notation "SM" ;
+    skos:prefLabel "Soil Moisture" ;
+    skos:related ev:precipitation,
+        ev:surface-air-temperature ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Land> ;
     ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
+    ev:standardAuthority ev:GCOS .
+
+ev:surface-air-temperature qudt:unit qudt-unit:K ;
+    skos:notation "T2m" ;
+    skos:prefLabel "Surface Air Temperature" ;
+    skos:related ev:precipitation,
+        ev:sea-level,
+        ev:soil-moisture ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Atmosphere> ;
+    ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/reanalysis>,
         <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
     ev:standardAuthority ev:GCOS .
 
@@ -302,6 +302,7 @@ $defs:
       id:
         type: string
         description: Compact URI for this variable, e.g. ev:surface-air-temperature
+        x-jsonld-id: '@id'
       name:
         type: string
         x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
@@ -375,6 +376,7 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
+    "id": "@id",
     "name": "skos:prefLabel",
     "code": "skos:notation",
     "definition": "skos:definition",

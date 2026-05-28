@@ -14,7 +14,8 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Compact URI for this variable, e.g. ev:surface-air-temperature"
+          "description": "Compact URI for this variable, e.g. ev:surface-air-temperature",
+          "x-jsonld-id": "@id"
         },
         "name": {
           "type": "string",

@@ -193,7 +193,7 @@
   ],
   "name": "Building Blocks - OGC CRDWG Essential Variable Blocks",
   "abstract": "OGC Building Blocks for the Climate Resilience Domain Working Group (CRDWG)\nEssential Variable registry. Provides schema, semantics, and ontology for\ndescribing and publishing Essential Climate Variables as linked data.\n",
-  "modified": "2026-05-28T07:48:46.162461",
+  "modified": "2026-05-28T09:16:24.506913",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"ccc2722ff09e6ff35b4415d9a62b15eb66c2dc45",
@@ -401,8 +401,8 @@
         }
       ],
       "dependsOn": [
-        "bblocks://ogc.sosa.features.observation",
-        "bblocks://ogc.crdwg.ev-schema"
+        "bblocks://ogc.crdwg.ev-schema",
+        "bblocks://ogc.sosa.features.observation"
       ],
       "ldContext": {
         "prof:hasArtifact": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld",

@@ -13,6 +13,7 @@ $defs:
       id:
         type: string
         description: Compact URI for this variable, e.g. ev:surface-air-temperature
+        x-jsonld-id: '@id'
       name:
         type: string
         x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel

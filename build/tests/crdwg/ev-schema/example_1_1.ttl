@@ -3,7 +3,7 @@
 @prefix qudt-unit: <http://qudt.org/vocab/unit/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-[] qudt:unit qudt-unit:K ;
+ev:surface-air-temperature qudt:unit qudt-unit:K ;
     skos:definition "Temperature of the air at 2 m above the surface." ;
     skos:notation "T2m" ;
     skos:prefLabel "Surface Air Temperature" ;
