@@ -8,10 +8,7 @@
     ]
   },
   "properties": {
-    "observedProperty": {
-      "id": "ev:surface-air-temperature",
-      "name": "Surface Air Temperature"
-    },
+    "observedProperty": "ev:surface-air-temperature",
     "resultTime": "2025-07-15T12:00:00Z",
     "hasResult": {
       "value": 308.2,

@@ -240,14 +240,12 @@ The JSON-LD context resolves compact URIs at uplift time:
 @prefix qudt-unit: <http://qudt.org/vocab/unit/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-[] qudt:unit qudt-unit:MilliM ;
-    skos:notation "P" ;
-    skos:prefLabel "Precipitation" ;
-    skos:related ev:soil-moisture,
+[] skos:notation "SM" ;
+    skos:prefLabel "Soil Moisture" ;
+    skos:related ev:precipitation,
         ev:surface-air-temperature ;
-    ev:evDomain <https://w3id.org/ogc/crdwg/Atmosphere> ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Land> ;
     ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
-        <https://w3id.org/ogc/crdwg/ev/measurementType/reanalysis>,
         <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
     ev:standardAuthority ev:GCOS .
 
@@ -263,12 +261,14 @@ The JSON-LD context resolves compact URIs at uplift time:
         <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
     ev:standardAuthority ev:GCOS .
 
-[] skos:notation "SM" ;
-    skos:prefLabel "Soil Moisture" ;
-    skos:related ev:precipitation,
+[] qudt:unit qudt-unit:MilliM ;
+    skos:notation "P" ;
+    skos:prefLabel "Precipitation" ;
+    skos:related ev:soil-moisture,
         ev:surface-air-temperature ;
-    ev:evDomain <https://w3id.org/ogc/crdwg/Land> ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Atmosphere> ;
     ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/reanalysis>,
         <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
     ev:standardAuthority ev:GCOS .
 

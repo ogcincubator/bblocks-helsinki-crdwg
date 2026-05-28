@@ -31,22 +31,22 @@
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/_sources/ev-observation/context.jsonld",
   "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/_sources/ev-observation/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-helsinki-crdwg/blob/master/build/tests/crdwg/ev-observation/",
   "description": "## Essential Variable Observation\n\nA GeoJSON Feature that records a single observation of a CRDWG Essential\nVariable. The block extends `ogc.sosa.features.observation` (from the\n[ogcapi-sosa register](https://opengeospatial.github.io/ogcapi-sosa/)) and\nconstrains the `observedProperty` field to conform to the `ev-schema` block.\n\nBecause it inherits from a GeoJSON Feature, the bblocks viewer renders example\ninstances on an interactive map.\n\n### Structure\n\n```\nFeature\n\u2514\u2500\u2500 geometry        \u2014 point, polygon, or other geometry for the observation location\n\u2514\u2500\u2500 properties\n    \u251c\u2500\u2500 observedProperty  \u2014 an EV object conforming to ogc.crdwg.ev-schema\n    \u251c\u2500\u2500 resultTime        \u2014 ISO 8601 timestamp of the observation\n    \u251c\u2500\u2500 hasResult         \u2014 the measured value and unit of measure\n    \u2514\u2500\u2500 madeBySensor      \u2014 URI of the sensor or platform\n```\n\n### Parent block\n\nThe SOSA Observation Feature block provides the base structure and JSON-LD\ncontext for all SOSA/SSN terms (`sosa:observedProperty`, `sosa:resultTime`,\n`sosa:hasResult`, `sosa:madeBySensor`). This block only adds the constraint\non `observedProperty` \u2014 no extra context mappings are needed unless additional\ncustom fields are introduced.\n",
   "examples": [
     {
-      "title": "Surface air temperature observation at Prague",
+      "title": "Surface air temperature observation at Prague (compact)",
       "snippets": [
         {
           "language": "json",
           "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_1_1.json",
-          "code": "{\n  \"type\": \"Feature\",\n  \"geometry\": { \"type\": \"Point\", \"coordinates\": [14.42, 50.08] },\n  \"properties\": {\n    \"observedProperty\": {\n      \"id\": \"ev:surface-air-temperature\",\n      \"name\": \"Surface Air Temperature\"\n    },\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": { \"value\": 308.2, \"uom\": \"qudt-unit:K\" },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}\n"
+          "code": "{\n  \"type\": \"Feature\",\n  \"geometry\": { \"type\": \"Point\", \"coordinates\": [14.42, 50.08] },\n  \"properties\": {\n    \"observedProperty\": \"ev:surface-air-temperature\",\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": { \"value\": 308.2, \"uom\": \"qudt-unit:K\" },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}\n"
         },
         {
           "language": "jsonld",
           "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_1_1.jsonld",
-          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      14.42,\n      50.08\n    ]\n  },\n  \"properties\": {\n    \"observedProperty\": {\n      \"id\": \"ev:surface-air-temperature\",\n      \"name\": \"Surface Air Temperature\"\n    },\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": {\n      \"value\": 308.2,\n      \"uom\": \"qudt-unit:K\"\n    },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}"
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      14.42,\n      50.08\n    ]\n  },\n  \"properties\": {\n    \"observedProperty\": \"ev:surface-air-temperature\",\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": {\n      \"value\": 308.2,\n      \"uom\": \"qudt-unit:K\"\n    },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}"
         },
         {
           "language": "ttl",
@@ -55,9 +55,30 @@
         }
       ],
       "base-uri": "https://w3id.org/ogc/crdwg/"
+    },
+    {
+      "title": "Surface air temperature observation at Prague (full EV object)",
+      "snippets": [
+        {
+          "language": "json",
+          "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_2_1.json",
+          "code": "{\n  \"type\": \"Feature\",\n  \"geometry\": { \"type\": \"Point\", \"coordinates\": [14.42, 50.08] },\n  \"properties\": {\n    \"observedProperty\": {\n      \"id\": \"ev:surface-air-temperature\",\n      \"name\": \"Surface Air Temperature\",\n      \"code\": \"T2m\",\n      \"domain\": \"Atmosphere\",\n      \"standardAuthority\": \"ev:GCOS\"\n    },\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": { \"value\": 308.2, \"uom\": \"qudt-unit:K\" },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_2_1.jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      14.42,\n      50.08\n    ]\n  },\n  \"properties\": {\n    \"observedProperty\": {\n      \"id\": \"ev:surface-air-temperature\",\n      \"name\": \"Surface Air Temperature\",\n      \"code\": \"T2m\",\n      \"domain\": \"Atmosphere\",\n      \"standardAuthority\": \"ev:GCOS\"\n    },\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": {\n      \"value\": 308.2,\n      \"uom\": \"qudt-unit:K\"\n    },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_2_1.ttl",
+          "code": "@prefix ev: <https://w3id.org/ogc/crdwg/ev/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a geojson:Feature ;\n    sosa:hasResult [ ] ;\n    sosa:madeBySensor <sensor:prague-klementinum> ;\n    sosa:observedProperty ev:surface-air-temperature ;\n    sosa:resultTime \"2025-07-15T12:00:00Z\" ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.442e+01 5.008e+01 ) ] .\n\n"
+        }
+      ],
+      "base-uri": "https://w3id.org/ogc/crdwg/"
     }
   ],
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Observation of a Climate Resilience Essential Variable\nallOf:\n- $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml\nproperties:\n  properties:\n    properties:\n      observedProperty:\n        $ref: https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Observation of a Climate Resilience Essential Variable\nallOf:\n- $ref: https://opengeospatial.github.io/ogcapi-sosa/build/annotated/sosa/features/observation/schema.yaml\nproperties:\n  properties:\n    properties:\n      observedProperty:\n        oneOf:\n        - type: string\n          pattern: '^ev:'\n        - $ref: https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-helsinki-crdwg",
   "gitPath": "_sources/ev-observation"
 }

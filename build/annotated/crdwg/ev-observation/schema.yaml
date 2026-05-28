@@ -6,4 +6,7 @@ properties:
   properties:
     properties:
       observedProperty:
-        $ref: https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml
+        oneOf:
+        - type: string
+          pattern: '^ev:'
+        - $ref: https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/schema.yaml

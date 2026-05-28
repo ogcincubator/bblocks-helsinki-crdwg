@@ -1,16 +1,16 @@
 {
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 1,
-    "result": false
+    "passed": 3,
+    "failed": 0,
+    "result": true
   },
   "bblocks": {
     "ogc.crdwg.ev-schema": {
       "title": "Validation report for ogc.crdwg.ev-schema - Essential Variable",
       "bblockName": "Essential Variable",
       "bblockId": "ogc.crdwg.ev-schema",
-      "generated": "2026-05-28T07:42:42.473307+00:00",
+      "generated": "2026-05-28T07:48:48.356641+00:00",
       "result": true,
       "items": [
         {
@@ -135,7 +135,7 @@
       "title": "Validation report for ogc.crdwg.ev-ontology - Essential Variable Ontology",
       "bblockName": "Essential Variable Ontology",
       "bblockId": "ogc.crdwg.ev-ontology",
-      "generated": "2026-05-28T07:42:42.477339+00:00",
+      "generated": "2026-05-28T07:48:48.360778+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -149,8 +149,8 @@
       "title": "Validation report for ogc.crdwg.ev-observation - Essential Variable Observation",
       "bblockName": "Essential Variable Observation",
       "bblockId": "ogc.crdwg.ev-observation",
-      "generated": "2026-05-28T07:42:44.159562+00:00",
-      "result": false,
+      "generated": "2026-05-28T07:48:50.021985+00:00",
+      "result": true,
       "items": [
         {
           "source": {
@@ -162,7 +162,7 @@
             "snippetIndex": 1,
             "language": "application/json"
           },
-          "result": false,
+          "result": true,
           "sections": [
             {
               "name": "FILES",
@@ -199,11 +199,9 @@
               "entries": [
                 {
                   "op": "validation",
-                  "result": false,
-                  "exception": "ValidationError",
-                  "errorMessage": "{'id': 'ev:surface-air-temperature', 'name': 'Surface Air Temperature'} is not valid under any of the given schemas",
-                  "isError": true,
-                  "message": "ValidationError: {'id': 'ev:surface-air-temperature', 'name': 'Surface Air Temperature'} is not valid under any of the given schemas\n\nFailed validating 'oneOf' in schema['properties']['properties']['properties']['observedProperty']:\n    {'$defs': {'EssentialVariable': {'properties': {'code': {'description': 'Authority '\n                                                                            'code, '\n                                                                            'e.g. '\n                                                                            'T2m '\n                                                                            '(GCOS)',\n                                                             'type': 'string',\n                                                             'x-jsonld-id': 'http://www.w3.org/2004/02/skos/core#notation'},\n                                                    'definition': {'type': 'string',\n                                                                   'x-jsonld-id': 'http://www.w3.org/2004/02/skos/core#definition'},\n                                                    'domain': {'enum': ['Atmosphere',\n                                                                        'Land',\n                                                                        'Ocean',\n                                                                        'Cryosphere',\n                                                                        'Biosphere'],\n                                                               'type': 'string',\n                                                               'x-jsonld-id': 'https://w3id.org/ogc/crdwg/ev/evDomain',\n                                                               'x-jsonld-type': '@id'},\n                                                    'id': {'description': 'Compact '\n                                                                          'URI '\n                                                                          'for '\n                                                                          'this '\n                                                                          'variable, '\n                                                                          'e.g. '\n                                                                          'ev:surface-air-temperature',\n                                                           'type': 'string'},\n                                                    'measurementTypes': {'items': {'enum': ['in-situ',\n                                                                                            'remote-sensing',\n                                                                                            'reanalysis'],\n                                                                                   'type': 'string'},\n                                                                         'type': 'array',\n                                                                         'x-jsonld-base': 'https://w3id.org/ogc/crdwg/ev/measurementType/',\n                                                                         'x-jsonld-id': 'https://w3id.org/ogc/crdwg/ev/measurementTypes',\n                                                                         'x-jsonld-type': '@id'},\n                                                    'name': {'type': 'string',\n                                                             'x-jsonld-id': 'http://www.w3.org/2004/02/skos/core#prefLabel'},\n                                                    'related': {'items': {'description': 'Compact '\n                                                                                         'URIs '\n                                                                                         'of '\n                                                                                         'related '\n                                                                                         'EVs',\n                                                                          'type': 'string'},\n                                                                'type': 'array',\n                                                                'x-jsonld-id': 'http://www.w3.org/2004/02/skos/core#related',\n                                                                'x-jsonld-type': '@id'},\n                                                    'standardAuthority': {'description': 'Compact '\n                                                                                         'URI '\n                                                                                         'of '\n                                                                                         'the '\n                                                                                         'body '\n                                                                                         'mandating '\n                                                                                         'this '\n                                                                                         'variable, '\n                                                                                         'e.g. '\n                                                                                         'ev:GCOS',\n                                                                          'type': 'string',\n                                                                          'x-jsonld-id': 'https://w3id.org/ogc/crdwg/ev/standardAuthority',\n                                                                          'x-jsonld-type': '@id'},\n                                                    'unit': {'description': 'QUDT '\n                                                                            'unit '\n                                                                            'compact '\n                                                                            'URI, '\n                                                                            'e.g. '\n                                                                            'qudt-unit:K',\n                                                             'type': 'string',\n                                                             'x-jsonld-id': 'http://qudt.org/schema/qudt/unit',\n                                                             'x-jsonld-type': '@id'}},\n                                     'required': ['id',\n                                                  'name',\n                                                  'code',\n                                                  'domain',\n                                                  'standardAuthority'],\n                                     'type': 'object'}},\n     '$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'description': 'Essential Variable definition',\n     'oneOf': [{'$ref': '#/$defs/EssentialVariable'},\n               {'items': {'$ref': '#/$defs/EssentialVariable'},\n                'type': 'array'}],\n     'x-jsonld-prefixes': {'dct': 'http://purl.org/dc/terms/',\n                           'ev': 'https://w3id.org/ogc/crdwg/ev/',\n                           'qudt': 'http://qudt.org/schema/qudt/',\n                           'qudt-unit': 'http://qudt.org/vocab/unit/',\n                           'skos': 'http://www.w3.org/2004/02/skos/core#'}}\n\nOn instance['properties']['observedProperty']:\n    {'id': 'ev:surface-air-temperature', 'name': 'Surface Air Temperature'}"
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
                 }
               ]
             },
@@ -221,38 +219,38 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl",
                   "focusNodes": {
-                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testResult>": {
-                      "nodes": []
-                    },
                     "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
                       "nodes": [
-                        "_:Na1f8b4118bd740c694161bcc8420a6bd"
+                        "_:N9591d05a5954493eb651250493391330"
                       ]
                     },
-                    "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
                       "nodes": []
                     },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
                     "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
                       "nodes": []
                     },
                     "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
                       "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
+                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:Na1f8b4118bd740c694161bcc8420a6bd\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:N9591d05a5954493eb651250493391330\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -264,26 +262,161 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
                   "focusNodes": {
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "_:Na1f8b4118bd740c694161bcc8420a6bd"
-                      ]
-                    },
                     "geojson:GeometryShape/sh:or/rdf:first": {
                       "nodes": []
                     },
                     "geojson:GeometryShape": {
                       "nodes": []
                     },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
                     "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                       "nodes": []
                     },
-                    "geojson:LinkShape": {
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "_:N9591d05a5954493eb651250493391330"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: _:N9591d05a5954493eb651250493391330\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/crdwg/ev-observation/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 12,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>": {
+                      "nodes": [
+                        "_:N60bdfa2786b0477cb5c91dff952047fc"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testResult>": {
+                      "nodes": []
+                    },
+                    "<https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: _:Na1f8b4118bd740c694161bcc8420a6bd\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:N60bdfa2786b0477cb5c91dff952047fc\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    },
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "_:N60bdfa2786b0477cb5c91dff952047fc"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:FeatureShape: _:N60bdfa2786b0477cb5c91dff952047fc\n"
                 }
               ]
             }
@@ -292,9 +425,9 @@
       ],
       "globalErrors": {},
       "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1
+        "total": 2,
+        "passed": 2,
+        "failed": 0
       }
     }
   }
