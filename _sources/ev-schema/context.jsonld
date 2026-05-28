@@ -1,17 +1,30 @@
 {
   "@context": {
-    "ev":        "https://w3id.org/ogc/crdwg/ev/",
-    "skos":      "http://www.w3.org/2004/02/skos/core#",
-    "qudt":      "http://qudt.org/schema/qudt/",
+    "ev": "https://w3id.org/ogc/crdwg/ev/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "qudt": "http://qudt.org/schema/qudt/",
     "qudt-unit": "http://qudt.org/vocab/unit/",
-    "dct":       "http://purl.org/dc/terms/",
-    "name":               "skos:prefLabel",
-    "definition":         "skos:definition",
-    "code":               "skos:notation",
-    "unit":               { "@id": "qudt:unit", "@type": "@id" },
-    "related":            { "@id": "skos:related", "@type": "@id" },
-    "domain":             { "@id": "ev:evDomain", "@type": "@id" },
-    "standardAuthority":  { "@id": "ev:standardAuthority", "@type": "@id" },
+    "dct": "http://purl.org/dc/terms/",
+    "id": "@id",
+    "name": "skos:prefLabel",
+    "definition": "skos:definition",
+    "code": "skos:notation",
+    "unit": {
+      "@id": "qudt:unit",
+      "@type": "@id"
+    },
+    "related": {
+      "@id": "skos:related",
+      "@type": "@id"
+    },
+    "domain": {
+      "@id": "ev:evDomain",
+      "@type": "@id"
+    },
+    "standardAuthority": {
+      "@id": "ev:standardAuthority",
+      "@type": "@id"
+    },
     "measurementTypes": {
       "@id": "ev:measurementTypes",
       "@type": "@id",
