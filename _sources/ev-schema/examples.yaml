@@ -1,58 +1,62 @@
 - title: Surface Air Temperature
-  content: |
-    {
-      "id": "ev:surface-air-temperature",
-      "name": "Surface Air Temperature",
-      "code": "T2m",
-      "definition": "Temperature of the air at 2 m above the surface.",
-      "domain": "Atmosphere",
-      "standardAuthority": "ev:GCOS",
-      "unit": "qudt-unit:K",
-      "measurementTypes": ["in-situ", "remote-sensing", "reanalysis"],
-      "related": ["ev:precipitation", "ev:soil-moisture", "ev:sea-level"]
-    }
+  snippets:
+    - language: json
+      code: |
+        {
+          "id": "ev:surface-air-temperature",
+          "name": "Surface Air Temperature",
+          "code": "T2m",
+          "definition": "Temperature of the air at 2 m above the surface.",
+          "domain": "Atmosphere",
+          "standardAuthority": "ev:GCOS",
+          "unit": "qudt-unit:K",
+          "measurementTypes": ["in-situ", "remote-sensing", "reanalysis"],
+          "related": ["ev:precipitation", "ev:soil-moisture", "ev:sea-level"]
+        }
   base-uri: https://w3id.org/ogc/crdwg/
 - title: All four EVs (array form)
-  content: |
-    [
-      {
-        "id": "ev:surface-air-temperature",
-        "name": "Surface Air Temperature",
-        "code": "T2m",
-        "domain": "Atmosphere",
-        "standardAuthority": "ev:GCOS",
-        "unit": "qudt-unit:K",
-        "measurementTypes": ["in-situ", "remote-sensing", "reanalysis"],
-        "related": ["ev:precipitation", "ev:soil-moisture", "ev:sea-level"]
-      },
-      {
-        "id": "ev:precipitation",
-        "name": "Precipitation",
-        "code": "P",
-        "domain": "Atmosphere",
-        "standardAuthority": "ev:GCOS",
-        "unit": "qudt-unit:MilliM",
-        "measurementTypes": ["in-situ", "remote-sensing", "reanalysis"],
-        "related": ["ev:surface-air-temperature", "ev:soil-moisture"]
-      },
-      {
-        "id": "ev:soil-moisture",
-        "name": "Soil Moisture",
-        "code": "SM",
-        "domain": "Land",
-        "standardAuthority": "ev:GCOS",
-        "measurementTypes": ["in-situ", "remote-sensing"],
-        "related": ["ev:precipitation", "ev:surface-air-temperature"]
-      },
-      {
-        "id": "ev:sea-level",
-        "name": "Sea Level",
-        "code": "SL",
-        "domain": "Ocean",
-        "standardAuthority": "ev:GCOS",
-        "unit": "qudt-unit:M",
-        "measurementTypes": ["in-situ", "remote-sensing"],
-        "related": ["ev:surface-air-temperature"]
-      }
-    ]
+  snippets:
+    - language: json
+      code: |
+        [
+          {
+            "id": "ev:surface-air-temperature",
+            "name": "Surface Air Temperature",
+            "code": "T2m",
+            "domain": "Atmosphere",
+            "standardAuthority": "ev:GCOS",
+            "unit": "qudt-unit:K",
+            "measurementTypes": ["in-situ", "remote-sensing", "reanalysis"],
+            "related": ["ev:precipitation", "ev:soil-moisture", "ev:sea-level"]
+          },
+          {
+            "id": "ev:precipitation",
+            "name": "Precipitation",
+            "code": "P",
+            "domain": "Atmosphere",
+            "standardAuthority": "ev:GCOS",
+            "unit": "qudt-unit:MilliM",
+            "measurementTypes": ["in-situ", "remote-sensing", "reanalysis"],
+            "related": ["ev:surface-air-temperature", "ev:soil-moisture"]
+          },
+          {
+            "id": "ev:soil-moisture",
+            "name": "Soil Moisture",
+            "code": "SM",
+            "domain": "Land",
+            "standardAuthority": "ev:GCOS",
+            "measurementTypes": ["in-situ", "remote-sensing"],
+            "related": ["ev:precipitation", "ev:surface-air-temperature"]
+          },
+          {
+            "id": "ev:sea-level",
+            "name": "Sea Level",
+            "code": "SL",
+            "domain": "Ocean",
+            "standardAuthority": "ev:GCOS",
+            "unit": "qudt-unit:M",
+            "measurementTypes": ["in-situ", "remote-sensing"],
+            "related": ["ev:surface-air-temperature"]
+          }
+        ]
   base-uri: https://w3id.org/ogc/crdwg/
