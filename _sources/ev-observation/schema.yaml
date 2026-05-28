@@ -6,4 +6,7 @@ properties:
   properties:
     properties:
       observedProperty:
-        $ref: bblocks://ogc.crdwg.ev-schema
+        oneOf:
+          - type: string
+            pattern: "^ev:"
+          - $ref: bblocks://ogc.crdwg.ev-schema

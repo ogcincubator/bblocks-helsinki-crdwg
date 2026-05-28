@@ -1,4 +1,19 @@
-- title: Surface air temperature observation at Prague
+- title: Surface air temperature observation at Prague (compact)
+  snippets:
+    - language: json
+      code: |
+        {
+          "type": "Feature",
+          "geometry": { "type": "Point", "coordinates": [14.42, 50.08] },
+          "properties": {
+            "observedProperty": "ev:surface-air-temperature",
+            "resultTime": "2025-07-15T12:00:00Z",
+            "hasResult": { "value": 308.2, "uom": "qudt-unit:K" },
+            "madeBySensor": "sensor:prague-klementinum"
+          }
+        }
+  base-uri: https://w3id.org/ogc/crdwg/
+- title: Surface air temperature observation at Prague (full EV object)
   snippets:
     - language: json
       code: |
@@ -8,7 +23,10 @@
           "properties": {
             "observedProperty": {
               "id": "ev:surface-air-temperature",
-              "name": "Surface Air Temperature"
+              "name": "Surface Air Temperature",
+              "code": "T2m",
+              "domain": "Atmosphere",
+              "standardAuthority": "ev:GCOS"
             },
             "resultTime": "2025-07-15T12:00:00Z",
             "hasResult": { "value": 308.2, "uom": "qudt-unit:K" },
