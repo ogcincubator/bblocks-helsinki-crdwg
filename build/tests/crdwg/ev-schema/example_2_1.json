@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ev:surface-air-temperature",
+    "name": "Surface Air Temperature",
+    "code": "T2m",
+    "domain": "Atmosphere",
+    "standardAuthority": "ev:GCOS",
+    "unit": "qudt-unit:K",
+    "measurementTypes": [
+      "in-situ",
+      "remote-sensing",
+      "reanalysis"
+    ],
+    "related": [
+      "ev:precipitation",
+      "ev:soil-moisture",
+      "ev:sea-level"
+    ]
+  },
+  {
+    "id": "ev:precipitation",
+    "name": "Precipitation",
+    "code": "P",
+    "domain": "Atmosphere",
+    "standardAuthority": "ev:GCOS",
+    "unit": "qudt-unit:MilliM",
+    "measurementTypes": [
+      "in-situ",
+      "remote-sensing",
+      "reanalysis"
+    ],
+    "related": [
+      "ev:surface-air-temperature",
+      "ev:soil-moisture"
+    ]
+  },
+  {
+    "id": "ev:soil-moisture",
+    "name": "Soil Moisture",
+    "code": "SM",
+    "domain": "Land",
+    "standardAuthority": "ev:GCOS",
+    "measurementTypes": [
+      "in-situ",
+      "remote-sensing"
+    ],
+    "related": [
+      "ev:precipitation",
+      "ev:surface-air-temperature"
+    ]
+  },
+  {
+    "id": "ev:sea-level",
+    "name": "Sea Level",
+    "code": "SL",
+    "domain": "Ocean",
+    "standardAuthority": "ev:GCOS",
+    "unit": "qudt-unit:M",
+    "measurementTypes": [
+      "in-situ",
+      "remote-sensing"
+    ],
+    "related": [
+      "ev:surface-air-temperature"
+    ]
+  }
+]

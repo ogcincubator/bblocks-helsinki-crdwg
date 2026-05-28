@@ -1,0 +1,131 @@
+Validation report for ogc.crdwg.ev-observation - Essential Variable Observation
+Generated 2026-05-28T07:42:44.159450+00:00
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: {'id': 'ev:surface-air-temperature', 'name': 'Surface Air Temperature'} is not valid under any of the given schemas
+
+Failed validating 'oneOf' in schema['properties']['properties']['properties']['observedProperty']:
+    {'$defs': {'EssentialVariable': {'properties': {'code': {'description': 'Authority '
+                                                                            'code, '
+                                                                            'e.g. '
+                                                                            'T2m '
+                                                                            '(GCOS)',
+                                                             'type': 'string',
+                                                             'x-jsonld-id': 'http://www.w3.org/2004/02/skos/core#notation'},
+                                                    'definition': {'type': 'string',
+                                                                   'x-jsonld-id': 'http://www.w3.org/2004/02/skos/core#definition'},
+                                                    'domain': {'enum': ['Atmosphere',
+                                                                        'Land',
+                                                                        'Ocean',
+                                                                        'Cryosphere',
+                                                                        'Biosphere'],
+                                                               'type': 'string',
+                                                               'x-jsonld-id': 'https://w3id.org/ogc/crdwg/ev/evDomain',
+                                                               'x-jsonld-type': '@id'},
+                                                    'id': {'description': 'Compact '
+                                                                          'URI '
+                                                                          'for '
+                                                                          'this '
+                                                                          'variable, '
+                                                                          'e.g. '
+                                                                          'ev:surface-air-temperature',
+                                                           'type': 'string'},
+                                                    'measurementTypes': {'items': {'enum': ['in-situ',
+                                                                                            'remote-sensing',
+                                                                                            'reanalysis'],
+                                                                                   'type': 'string'},
+                                                                         'type': 'array',
+                                                                         'x-jsonld-base': 'https://w3id.org/ogc/crdwg/ev/measurementType/',
+                                                                         'x-jsonld-id': 'https://w3id.org/ogc/crdwg/ev/measurementTypes',
+                                                                         'x-jsonld-type': '@id'},
+                                                    'name': {'type': 'string',
+                                                             'x-jsonld-id': 'http://www.w3.org/2004/02/skos/core#prefLabel'},
+                                                    'related': {'items': {'description': 'Compact '
+                                                                                         'URIs '
+                                                                                         'of '
+                                                                                         'related '
+                                                                                         'EVs',
+                                                                          'type': 'string'},
+                                                                'type': 'array',
+                                                                'x-jsonld-id': 'http://www.w3.org/2004/02/skos/core#related',
+                                                                'x-jsonld-type': '@id'},
+                                                    'standardAuthority': {'description': 'Compact '
+                                                                                         'URI '
+                                                                                         'of '
+                                                                                         'the '
+                                                                                         'body '
+                                                                                         'mandating '
+                                                                                         'this '
+                                                                                         'variable, '
+                                                                                         'e.g. '
+                                                                                         'ev:GCOS',
+                                                                          'type': 'string',
+                                                                          'x-jsonld-id': 'https://w3id.org/ogc/crdwg/ev/standardAuthority',
+                                                                          'x-jsonld-type': '@id'},
+                                                    'unit': {'description': 'QUDT '
+                                                                            'unit '
+                                                                            'compact '
+                                                                            'URI, '
+                                                                            'e.g. '
+                                                                            'qudt-unit:K',
+                                                             'type': 'string',
+                                                             'x-jsonld-id': 'http://qudt.org/schema/qudt/unit',
+                                                             'x-jsonld-type': '@id'}},
+                                     'required': ['id',
+                                                  'name',
+                                                  'code',
+                                                  'domain',
+                                                  'standardAuthority'],
+                                     'type': 'object'}},
+     '$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'description': 'Essential Variable definition',
+     'oneOf': [{'$ref': '#/$defs/EssentialVariable'},
+               {'items': {'$ref': '#/$defs/EssentialVariable'},
+                'type': 'array'}],
+     'x-jsonld-prefixes': {'dct': 'http://purl.org/dc/terms/',
+                           'ev': 'https://w3id.org/ogc/crdwg/ev/',
+                           'qudt': 'http://qudt.org/schema/qudt/',
+                           'qudt-unit': 'http://qudt.org/vocab/unit/',
+                           'skos': 'http://www.w3.org/2004/02/skos/core#'}}
+
+On instance['properties']['observedProperty']:
+    {'id': 'ev:surface-air-temperature', 'name': 'Surface Air Temperature'}
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyPresent>: _:Na1f8b4118bd740c694161bcc8420a6bd
+ - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testObservedPropertyConsistent>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValuesInterval>: *none*
+ - Shape <https://www.ogc.org/rules/sosa/#testCollectionPropertyValues>: *none*
+
+Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:FeatureShape: _:Na1f8b4118bd740c694161bcc8420a6bd
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:LinkShape: *none*
+
+=== End SHACL ===
+

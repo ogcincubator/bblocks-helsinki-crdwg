@@ -1,0 +1,20 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-schema/context.jsonld",
+  "id": "ev:surface-air-temperature",
+  "name": "Surface Air Temperature",
+  "code": "T2m",
+  "definition": "Temperature of the air at 2 m above the surface.",
+  "domain": "Atmosphere",
+  "standardAuthority": "ev:GCOS",
+  "unit": "qudt-unit:K",
+  "measurementTypes": [
+    "in-situ",
+    "remote-sensing",
+    "reanalysis"
+  ],
+  "related": [
+    "ev:precipitation",
+    "ev:soil-moisture",
+    "ev:sea-level"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      14.42,
+      50.08
+    ]
+  },
+  "properties": {
+    "observedProperty": {
+      "id": "ev:surface-air-temperature",
+      "name": "Surface Air Temperature"
+    },
+    "resultTime": "2025-07-15T12:00:00Z",
+    "hasResult": {
+      "value": 308.2,
+      "uom": "qudt-unit:K"
+    },
+    "madeBySensor": "sensor:prague-klementinum"
+  }
+}

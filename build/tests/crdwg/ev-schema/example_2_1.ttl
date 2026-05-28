@@ -1,0 +1,46 @@
+@prefix ev: <https://w3id.org/ogc/crdwg/ev/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix qudt-unit: <http://qudt.org/vocab/unit/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+[] qudt:unit qudt-unit:MilliM ;
+    skos:notation "P" ;
+    skos:prefLabel "Precipitation" ;
+    skos:related ev:soil-moisture,
+        ev:surface-air-temperature ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Atmosphere> ;
+    ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/reanalysis>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
+    ev:standardAuthority ev:GCOS .
+
+[] qudt:unit qudt-unit:K ;
+    skos:notation "T2m" ;
+    skos:prefLabel "Surface Air Temperature" ;
+    skos:related ev:precipitation,
+        ev:sea-level,
+        ev:soil-moisture ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Atmosphere> ;
+    ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/reanalysis>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
+    ev:standardAuthority ev:GCOS .
+
+[] skos:notation "SM" ;
+    skos:prefLabel "Soil Moisture" ;
+    skos:related ev:precipitation,
+        ev:surface-air-temperature ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Land> ;
+    ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
+    ev:standardAuthority ev:GCOS .
+
+[] qudt:unit qudt-unit:M ;
+    skos:notation "SL" ;
+    skos:prefLabel "Sea Level" ;
+    skos:related ev:surface-air-temperature ;
+    ev:evDomain <https://w3id.org/ogc/crdwg/Ocean> ;
+    ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
+        <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
+    ev:standardAuthority ev:GCOS .
+

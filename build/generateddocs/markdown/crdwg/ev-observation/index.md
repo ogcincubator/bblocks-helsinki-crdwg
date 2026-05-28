@@ -42,6 +42,8 @@ custom fields are introduced.
 ## Examples
 
 ### Surface air temperature observation at Prague
+#### json
+```json
 {
   "type": "Feature",
   "geometry": { "type": "Point", "coordinates": [14.42, 50.08] },
@@ -55,6 +57,54 @@ custom fields are introduced.
     "madeBySensor": "sensor:prague-klementinum"
   }
 }
+
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      14.42,
+      50.08
+    ]
+  },
+  "properties": {
+    "observedProperty": {
+      "id": "ev:surface-air-temperature",
+      "name": "Surface Air Temperature"
+    },
+    "resultTime": "2025-07-15T12:00:00Z",
+    "hasResult": {
+      "value": 308.2,
+      "uom": "qudt-unit:K"
+    },
+    "madeBySensor": "sensor:prague-klementinum"
+  }
+}
+```
+
+#### ttl
+```ttl
+@prefix ev: <https://w3id.org/ogc/crdwg/ev/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a geojson:Feature ;
+    sosa:hasResult [ ] ;
+    sosa:madeBySensor <sensor:prague-klementinum> ;
+    sosa:observedProperty ev:surface-air-temperature ;
+    sosa:resultTime "2025-07-15T12:00:00Z" ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( 1.442e+01 5.008e+01 ) ] .
+
+
+```
 
 ## Schema
 
