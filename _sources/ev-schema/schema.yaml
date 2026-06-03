@@ -1,6 +1,13 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Essential Variable definition
 $defs:
+  LangString:
+    oneOf:
+      - type: string
+      - type: object
+        additionalProperties:
+          type: string
+        description: "Language map, e.g. {\"en\": \"Foo\", \"de\": \"Bar\"}"
   EssentialVariable:
     type: object
     required:
@@ -14,12 +21,12 @@ $defs:
         type: string
         description: "Compact URI for this variable, e.g. ev:surface-air-temperature"
       name:
-        type: string
+        $ref: '#/$defs/LangString'
       code:
         type: string
         description: "Authority code, e.g. T2m (GCOS)"
       definition:
-        type: string
+        $ref: '#/$defs/LangString'
       domain:
         type: string
         enum:

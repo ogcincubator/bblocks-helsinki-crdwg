@@ -6,8 +6,14 @@
     "qudt-unit": "http://qudt.org/vocab/unit/",
     "dct": "http://purl.org/dc/terms/",
     "id": "@id",
-    "name": "skos:prefLabel",
-    "definition": "skos:definition",
+    "name": {
+      "@id": "skos:prefLabel",
+      "@container": "@language"
+    },
+    "definition": {
+      "@id": "skos:definition",
+      "@container": "@language"
+    },
     "code": "skos:notation",
     "unit": {
       "@id": "qudt:unit",

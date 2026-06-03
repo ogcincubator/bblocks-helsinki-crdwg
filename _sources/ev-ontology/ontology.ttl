@@ -1,66 +1,51 @@
-@prefix ev:    <https://w3id.org/ogc/crdwg/ev/> .
-@prefix ev-mt: <https://w3id.org/ogc/crdwg/ev/measurementType/> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix dcat:  <http://www.w3.org/ns/dcat#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix dcat:      <http://www.w3.org/ns/dcat#> .
+@prefix dct:       <http://purl.org/dc/terms/> .
+@prefix ev:        <https://w3id.org/ogc/crdwg/ev/> .
+@prefix ev-mt:     <https://w3id.org/ogc/crdwg/ev/measurementType/> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix qudt:      <http://qudt.org/schema/qudt/> .
+@prefix qudt-unit: <http://qudt.org/vocab/unit/> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
 
-# Catalog grouping the ontology and the measurement type code list
-<https://w3id.org/ogc/crdwg/ev/catalog>
-    a dcat:Catalog ;
-    dct:title "Climate Resilience EV Vocabulary" ;
-    dcat:hasPart ev:ontology, ev:MeasurementTypeScheme .
+ev:evDomain  a            owl:ObjectProperty ;
+        rdfs:isDefinedBy  ev:ontology ;
+        skos:definition   "Earth system domain: Atmosphere, Land, Ocean, Cryosphere, or Biosphere."@en ;
+        skos:prefLabel    "EV domain"@en , "EV-Domäne"@de , "dominio de la VE"@es .
 
-# The ontology itself
-ev:ontology a owl:Ontology ;
-    rdfs:label "Essential Variable ontology" .
+ev:measurementTypes  a    owl:ObjectProperty ;
+        rdfs:isDefinedBy  ev:ontology ;
+        rdfs:range        ev:MeasurementType ;
+        skos:definition   "Approaches by which the variable is typically measured."@en ;
+        skos:prefLabel    "measurement types"@en , "Messtypen"@de , "tipos de medición"@es .
 
-# Properties — each linked back to the ontology via rdfs:isDefinedBy
+ev-mt:in-situ  a        skos:Concept ;
+        skos:inScheme   ev:MeasurementTypeScheme ;
+        skos:notation   "in-situ" ;
+        skos:prefLabel  "in-situ"@en , "in-situ"@de , "in situ"@es .
 
-ev:standardAuthority a owl:ObjectProperty ;
-    rdfs:isDefinedBy ev:ontology ;
-    skos:prefLabel "standard authority"@en ,
-                   "Standardbehörde"@de ,
-                   "autoridad normativa"@es ;
-    skos:definition "Body mandating this variable (e.g. GCOS, GOOS, GEO BON)."@en .
+ev-mt:remote-sensing  a  skos:Concept ;
+        skos:inScheme   ev:MeasurementTypeScheme ;
+        skos:notation   "remote-sensing" ;
+        skos:prefLabel  "remote sensing"@en , "Fernerkundung"@de , "teledetección"@es .
 
-ev:evDomain a owl:ObjectProperty ;
-    rdfs:isDefinedBy ev:ontology ;
-    skos:prefLabel "EV domain"@en ,
-                   "EV-Domäne"@de ,
-                   "dominio de la VE"@es ;
-    skos:definition "Earth system domain: Atmosphere, Land, Ocean, Cryosphere, or Biosphere."@en .
+ev:standardAuthority  a   owl:ObjectProperty ;
+        rdfs:isDefinedBy  ev:ontology ;
+        skos:definition   "Body mandating this variable (e.g. GCOS, GOOS, GEO BON)."@en ;
+        skos:prefLabel    "standard authority"@en , "Standardbehörde"@de , "autoridad normativa"@es .
 
-ev:measurementTypes a owl:ObjectProperty ;
-    rdfs:isDefinedBy ev:ontology ;
-    skos:prefLabel "measurement types"@en ,
-                   "Messtypen"@de ,
-                   "tipos de medición"@es ;
-    skos:definition "Approaches by which the variable is typically measured."@en ;
-    rdfs:range ev:MeasurementType .
+ev-mt:reanalysis  a     skos:Concept ;
+        skos:inScheme   ev:MeasurementTypeScheme ;
+        skos:notation   "reanalysis" ;
+        skos:prefLabel  "reanalysis"@en , "Reanalyse"@de , "reanálisis"@es .
 
-# Code list for measurement type values
-ev:MeasurementTypeScheme a skos:ConceptScheme ;
-    skos:prefLabel "Measurement Type code list" .
+ev:catalog  a         dcat:Catalog ;
+        dct:title     "Climate Resilience EV Vocabulary" ;
+        dcat:hasPart  ev:ontology , ev:MeasurementTypeScheme .
 
-ev-mt:InSitu a skos:Concept ;
-    skos:inScheme ev:MeasurementTypeScheme ;
-    skos:prefLabel "in-situ"@en ,
-                   "in-situ"@de ,
-                   "in situ"@es ;
-    skos:notation "in-situ" .
+ev:ontology  a      owl:Ontology ;
+        rdfs:label  "Essential Variable ontology" .
 
-ev-mt:RemoteSensing a skos:Concept ;
-    skos:inScheme ev:MeasurementTypeScheme ;
-    skos:prefLabel "remote sensing"@en ,
-                   "Fernerkundung"@de ,
-                   "teledetección"@es ;
-    skos:notation "remote-sensing" .
-
-ev-mt:Reanalysis a skos:Concept ;
-    skos:inScheme ev:MeasurementTypeScheme ;
-    skos:prefLabel "reanalysis"@en ,
-                   "Reanalyse"@de ,
-                   "reanálisis"@es ;
-    skos:notation "reanalysis" .
+ev:MeasurementTypeScheme
+        a               skos:ConceptScheme ;
+        skos:prefLabel  "Measurement Type code list" .
