@@ -112,14 +112,15 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
 ```
 
 
-### All four EVs (array form)
+### All four EVs (array form, multilingual)
 #### json
 ```json
 [
   {
     "id": "ev:surface-air-temperature",
-    "name": "Surface Air Temperature",
+    "name": { "en": "Surface Air Temperature", "de": "Oberflächenlufttemperatur", "es": "Temperatura del aire en superficie" },
     "code": "T2m",
+    "definition": { "en": "Temperature of the air at 2 m above the surface.", "de": "Temperatur der Luft in 2 m Höhe über der Oberfläche.", "es": "Temperatura del aire a 2 m sobre la superficie." },
     "domain": "Atmosphere",
     "standardAuthority": "ev:GCOS",
     "unit": "qudt-unit:K",
@@ -128,8 +129,9 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
   },
   {
     "id": "ev:precipitation",
-    "name": "Precipitation",
+    "name": { "en": "Precipitation", "de": "Niederschlag", "es": "Precipitación" },
     "code": "P",
+    "definition": { "en": "Liquid or solid water falling from the atmosphere to the Earth's surface.", "de": "Flüssiges oder festes Wasser, das aus der Atmosphäre auf die Erdoberfläche fällt.", "es": "Agua líquida o sólida que cae de la atmósfera a la superficie terrestre." },
     "domain": "Atmosphere",
     "standardAuthority": "ev:GCOS",
     "unit": "qudt-unit:MilliM",
@@ -138,8 +140,9 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
   },
   {
     "id": "ev:soil-moisture",
-    "name": "Soil Moisture",
+    "name": { "en": "Soil Moisture", "de": "Bodenfeuchte", "es": "Humedad del suelo" },
     "code": "SM",
+    "definition": { "en": "Water content of the soil.", "de": "Wassergehalt des Bodens.", "es": "Contenido de agua del suelo." },
     "domain": "Land",
     "standardAuthority": "ev:GCOS",
     "measurementTypes": ["in-situ", "remote-sensing"],
@@ -147,8 +150,9 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
   },
   {
     "id": "ev:sea-level",
-    "name": "Sea Level",
+    "name": { "en": "Sea Level", "de": "Meeresspiegel", "es": "Nivel del mar" },
     "code": "SL",
+    "definition": { "en": "Height of the ocean surface relative to a geodetic datum.", "de": "Höhe der Meeresoberfläche relativ zu einem geodätischen Datum.", "es": "Altura de la superficie oceánica respecto a un datum geodésico." },
     "domain": "Ocean",
     "standardAuthority": "ev:GCOS",
     "unit": "qudt-unit:M",
@@ -166,8 +170,17 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
   "@graph": [
     {
       "id": "ev:surface-air-temperature",
-      "name": "Surface Air Temperature",
+      "name": {
+        "en": "Surface Air Temperature",
+        "de": "Oberfl\u00e4chenlufttemperatur",
+        "es": "Temperatura del aire en superficie"
+      },
       "code": "T2m",
+      "definition": {
+        "en": "Temperature of the air at 2 m above the surface.",
+        "de": "Temperatur der Luft in 2 m H\u00f6he \u00fcber der Oberfl\u00e4che.",
+        "es": "Temperatura del aire a 2 m sobre la superficie."
+      },
       "domain": "Atmosphere",
       "standardAuthority": "ev:GCOS",
       "unit": "qudt-unit:K",
@@ -184,8 +197,17 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
     },
     {
       "id": "ev:precipitation",
-      "name": "Precipitation",
+      "name": {
+        "en": "Precipitation",
+        "de": "Niederschlag",
+        "es": "Precipitaci\u00f3n"
+      },
       "code": "P",
+      "definition": {
+        "en": "Liquid or solid water falling from the atmosphere to the Earth's surface.",
+        "de": "Fl\u00fcssiges oder festes Wasser, das aus der Atmosph\u00e4re auf die Erdoberfl\u00e4che f\u00e4llt.",
+        "es": "Agua l\u00edquida o s\u00f3lida que cae de la atm\u00f3sfera a la superficie terrestre."
+      },
       "domain": "Atmosphere",
       "standardAuthority": "ev:GCOS",
       "unit": "qudt-unit:MilliM",
@@ -201,8 +223,17 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
     },
     {
       "id": "ev:soil-moisture",
-      "name": "Soil Moisture",
+      "name": {
+        "en": "Soil Moisture",
+        "de": "Bodenfeuchte",
+        "es": "Humedad del suelo"
+      },
       "code": "SM",
+      "definition": {
+        "en": "Water content of the soil.",
+        "de": "Wassergehalt des Bodens.",
+        "es": "Contenido de agua del suelo."
+      },
       "domain": "Land",
       "standardAuthority": "ev:GCOS",
       "measurementTypes": [
@@ -216,8 +247,17 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
     },
     {
       "id": "ev:sea-level",
-      "name": "Sea Level",
+      "name": {
+        "en": "Sea Level",
+        "de": "Meeresspiegel",
+        "es": "Nivel del mar"
+      },
       "code": "SL",
+      "definition": {
+        "en": "Height of the ocean surface relative to a geodetic datum.",
+        "de": "H\u00f6he der Meeresoberfl\u00e4che relativ zu einem geod\u00e4tischen Datum.",
+        "es": "Altura de la superficie oce\u00e1nica respecto a un datum geod\u00e9sico."
+      },
       "domain": "Ocean",
       "standardAuthority": "ev:GCOS",
       "unit": "qudt-unit:M",
@@ -241,8 +281,13 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 ev:sea-level qudt:unit qudt-unit:M ;
+    skos:definition "Höhe der Meeresoberfläche relativ zu einem geodätischen Datum."@de,
+        "Height of the ocean surface relative to a geodetic datum."@en,
+        "Altura de la superficie oceánica respecto a un datum geodésico."@es ;
     skos:notation "SL" ;
-    skos:prefLabel "Sea Level" ;
+    skos:prefLabel "Meeresspiegel"@de,
+        "Sea Level"@en,
+        "Nivel del mar"@es ;
     skos:related ev:surface-air-temperature ;
     ev:evDomain <https://w3id.org/ogc/crdwg/Ocean> ;
     ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
@@ -250,8 +295,13 @@ ev:sea-level qudt:unit qudt-unit:M ;
     ev:standardAuthority ev:GCOS .
 
 ev:precipitation qudt:unit qudt-unit:MilliM ;
+    skos:definition "Flüssiges oder festes Wasser, das aus der Atmosphäre auf die Erdoberfläche fällt."@de,
+        "Liquid or solid water falling from the atmosphere to the Earth's surface."@en,
+        "Agua líquida o sólida que cae de la atmósfera a la superficie terrestre."@es ;
     skos:notation "P" ;
-    skos:prefLabel "Precipitation" ;
+    skos:prefLabel "Niederschlag"@de,
+        "Precipitation"@en,
+        "Precipitación"@es ;
     skos:related ev:soil-moisture,
         ev:surface-air-temperature ;
     ev:evDomain <https://w3id.org/ogc/crdwg/Atmosphere> ;
@@ -260,8 +310,13 @@ ev:precipitation qudt:unit qudt-unit:MilliM ;
         <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
     ev:standardAuthority ev:GCOS .
 
-ev:soil-moisture skos:notation "SM" ;
-    skos:prefLabel "Soil Moisture" ;
+ev:soil-moisture skos:definition "Wassergehalt des Bodens."@de,
+        "Water content of the soil."@en,
+        "Contenido de agua del suelo."@es ;
+    skos:notation "SM" ;
+    skos:prefLabel "Bodenfeuchte"@de,
+        "Soil Moisture"@en,
+        "Humedad del suelo"@es ;
     skos:related ev:precipitation,
         ev:surface-air-temperature ;
     ev:evDomain <https://w3id.org/ogc/crdwg/Land> ;
@@ -270,8 +325,13 @@ ev:soil-moisture skos:notation "SM" ;
     ev:standardAuthority ev:GCOS .
 
 ev:surface-air-temperature qudt:unit qudt-unit:K ;
+    skos:definition "Temperatur der Luft in 2 m Höhe über der Oberfläche."@de,
+        "Temperature of the air at 2 m above the surface."@en,
+        "Temperatura del aire a 2 m sobre la superficie."@es ;
     skos:notation "T2m" ;
-    skos:prefLabel "Surface Air Temperature" ;
+    skos:prefLabel "Oberflächenlufttemperatur"@de,
+        "Surface Air Temperature"@en,
+        "Temperatura del aire en superficie"@es ;
     skos:related ev:precipitation,
         ev:sea-level,
         ev:soil-moisture ;
@@ -290,6 +350,13 @@ ev:surface-air-temperature qudt:unit qudt-unit:K ;
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Essential Variable definition
 $defs:
+  LangString:
+    oneOf:
+    - type: string
+    - type: object
+      additionalProperties:
+        type: string
+      description: 'Language map, e.g. {"en": "Foo", "de": "Bar"}'
   EssentialVariable:
     type: object
     required:
@@ -304,15 +371,17 @@ $defs:
         description: Compact URI for this variable, e.g. ev:surface-air-temperature
         x-jsonld-id: '@id'
       name:
-        type: string
+        $ref: '#/$defs/LangString'
         x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+        x-jsonld-container: '@language'
       code:
         type: string
         description: Authority code, e.g. T2m (GCOS)
         x-jsonld-id: http://www.w3.org/2004/02/skos/core#notation
       definition:
-        type: string
+        $ref: '#/$defs/LangString'
         x-jsonld-id: http://www.w3.org/2004/02/skos/core#definition
+        x-jsonld-container: '@language'
       domain:
         type: string
         enum:
@@ -377,9 +446,15 @@ Links to the schema:
 {
   "@context": {
     "id": "@id",
-    "name": "skos:prefLabel",
+    "name": {
+      "@id": "skos:prefLabel",
+      "@container": "@language"
+    },
     "code": "skos:notation",
-    "definition": "skos:definition",
+    "definition": {
+      "@id": "skos:definition",
+      "@container": "@language"
+    },
     "domain": {
       "@id": "ev:evDomain",
       "@type": "@id"

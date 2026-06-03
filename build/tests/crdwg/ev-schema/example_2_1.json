@@ -1,8 +1,17 @@
 [
   {
     "id": "ev:surface-air-temperature",
-    "name": "Surface Air Temperature",
+    "name": {
+      "en": "Surface Air Temperature",
+      "de": "Oberfl\u00e4chenlufttemperatur",
+      "es": "Temperatura del aire en superficie"
+    },
     "code": "T2m",
+    "definition": {
+      "en": "Temperature of the air at 2 m above the surface.",
+      "de": "Temperatur der Luft in 2 m H\u00f6he \u00fcber der Oberfl\u00e4che.",
+      "es": "Temperatura del aire a 2 m sobre la superficie."
+    },
     "domain": "Atmosphere",
     "standardAuthority": "ev:GCOS",
     "unit": "qudt-unit:K",
@@ -19,8 +28,17 @@
   },
   {
     "id": "ev:precipitation",
-    "name": "Precipitation",
+    "name": {
+      "en": "Precipitation",
+      "de": "Niederschlag",
+      "es": "Precipitaci\u00f3n"
+    },
     "code": "P",
+    "definition": {
+      "en": "Liquid or solid water falling from the atmosphere to the Earth's surface.",
+      "de": "Fl\u00fcssiges oder festes Wasser, das aus der Atmosph\u00e4re auf die Erdoberfl\u00e4che f\u00e4llt.",
+      "es": "Agua l\u00edquida o s\u00f3lida que cae de la atm\u00f3sfera a la superficie terrestre."
+    },
     "domain": "Atmosphere",
     "standardAuthority": "ev:GCOS",
     "unit": "qudt-unit:MilliM",
@@ -36,8 +54,17 @@
   },
   {
     "id": "ev:soil-moisture",
-    "name": "Soil Moisture",
+    "name": {
+      "en": "Soil Moisture",
+      "de": "Bodenfeuchte",
+      "es": "Humedad del suelo"
+    },
     "code": "SM",
+    "definition": {
+      "en": "Water content of the soil.",
+      "de": "Wassergehalt des Bodens.",
+      "es": "Contenido de agua del suelo."
+    },
     "domain": "Land",
     "standardAuthority": "ev:GCOS",
     "measurementTypes": [
@@ -51,8 +78,17 @@
   },
   {
     "id": "ev:sea-level",
-    "name": "Sea Level",
+    "name": {
+      "en": "Sea Level",
+      "de": "Meeresspiegel",
+      "es": "Nivel del mar"
+    },
     "code": "SL",
+    "definition": {
+      "en": "Height of the ocean surface relative to a geodetic datum.",
+      "de": "H\u00f6he der Meeresoberfl\u00e4che relativ zu einem geod\u00e4tischen Datum.",
+      "es": "Altura de la superficie oce\u00e1nica respecto a un datum geod\u00e9sico."
+    },
     "domain": "Ocean",
     "standardAuthority": "ev:GCOS",
     "unit": "qudt-unit:M",

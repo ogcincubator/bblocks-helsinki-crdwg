@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.crdwg.ev-schema - Essential Variable",
   "bblockName": "Essential Variable",
   "bblockId": "ogc.crdwg.ev-schema",
-  "generated": "2026-05-28T09:16:27.740238+00:00",
+  "generated": "2026-06-03T09:00:02.776648+00:00",
   "result": true,
   "items": [
     {
@@ -95,7 +95,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_2_1.ttl",
-              "size": 37,
+              "size": 57,
               "isError": false,
               "message": "Output Turtle example_2_1.ttl created"
             }

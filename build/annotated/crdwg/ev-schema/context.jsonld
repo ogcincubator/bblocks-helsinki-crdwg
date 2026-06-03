@@ -1,9 +1,15 @@
 {
   "@context": {
     "id": "@id",
-    "name": "skos:prefLabel",
+    "name": {
+      "@id": "skos:prefLabel",
+      "@container": "@language"
+    },
     "code": "skos:notation",
-    "definition": "skos:definition",
+    "definition": {
+      "@id": "skos:definition",
+      "@container": "@language"
+    },
     "domain": {
       "@id": "ev:evDomain",
       "@type": "@id"

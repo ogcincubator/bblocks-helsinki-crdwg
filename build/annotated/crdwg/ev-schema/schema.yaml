@@ -1,6 +1,13 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 description: Essential Variable definition
 $defs:
+  LangString:
+    oneOf:
+    - type: string
+    - type: object
+      additionalProperties:
+        type: string
+      description: 'Language map, e.g. {"en": "Foo", "de": "Bar"}'
   EssentialVariable:
     type: object
     required:
@@ -15,15 +22,17 @@ $defs:
         description: Compact URI for this variable, e.g. ev:surface-air-temperature
         x-jsonld-id: '@id'
       name:
-        type: string
+        $ref: '#/$defs/LangString'
         x-jsonld-id: http://www.w3.org/2004/02/skos/core#prefLabel
+        x-jsonld-container: '@language'
       code:
         type: string
         description: Authority code, e.g. T2m (GCOS)
         x-jsonld-id: http://www.w3.org/2004/02/skos/core#notation
       definition:
-        type: string
+        $ref: '#/$defs/LangString'
         x-jsonld-id: http://www.w3.org/2004/02/skos/core#definition
+        x-jsonld-container: '@language'
       domain:
         type: string
         enum:

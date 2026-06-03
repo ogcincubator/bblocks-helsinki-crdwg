@@ -18,21 +18,21 @@ ev:evDomain a owl:ObjectProperty ;
         "EV domain"@en,
         "dominio de la VE"@es .
 
-ev-mt:InSitu a skos:Concept ;
+ev-mt:in-situ a skos:Concept ;
     skos:inScheme ev:MeasurementTypeScheme ;
     skos:notation "in-situ" ;
     skos:prefLabel "in-situ"@de,
         "in-situ"@en,
         "in situ"@es .
 
-ev-mt:Reanalysis a skos:Concept ;
+ev-mt:reanalysis a skos:Concept ;
     skos:inScheme ev:MeasurementTypeScheme ;
     skos:notation "reanalysis" ;
     skos:prefLabel "Reanalyse"@de,
         "reanalysis"@en,
         "reanálisis"@es .
 
-ev-mt:RemoteSensing a skos:Concept ;
+ev-mt:remote-sensing a skos:Concept ;
     skos:inScheme ev:MeasurementTypeScheme ;
     skos:notation "remote-sensing" ;
     skos:prefLabel "Fernerkundung"@de,

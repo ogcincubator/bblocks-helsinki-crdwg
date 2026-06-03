@@ -4,8 +4,13 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 ev:sea-level qudt:unit qudt-unit:M ;
+    skos:definition "Höhe der Meeresoberfläche relativ zu einem geodätischen Datum."@de,
+        "Height of the ocean surface relative to a geodetic datum."@en,
+        "Altura de la superficie oceánica respecto a un datum geodésico."@es ;
     skos:notation "SL" ;
-    skos:prefLabel "Sea Level" ;
+    skos:prefLabel "Meeresspiegel"@de,
+        "Sea Level"@en,
+        "Nivel del mar"@es ;
     skos:related ev:surface-air-temperature ;
     ev:evDomain <https://w3id.org/ogc/crdwg/Ocean> ;
     ev:measurementTypes <https://w3id.org/ogc/crdwg/ev/measurementType/in-situ>,
@@ -13,8 +18,13 @@ ev:sea-level qudt:unit qudt-unit:M ;
     ev:standardAuthority ev:GCOS .
 
 ev:precipitation qudt:unit qudt-unit:MilliM ;
+    skos:definition "Flüssiges oder festes Wasser, das aus der Atmosphäre auf die Erdoberfläche fällt."@de,
+        "Liquid or solid water falling from the atmosphere to the Earth's surface."@en,
+        "Agua líquida o sólida que cae de la atmósfera a la superficie terrestre."@es ;
     skos:notation "P" ;
-    skos:prefLabel "Precipitation" ;
+    skos:prefLabel "Niederschlag"@de,
+        "Precipitation"@en,
+        "Precipitación"@es ;
     skos:related ev:soil-moisture,
         ev:surface-air-temperature ;
     ev:evDomain <https://w3id.org/ogc/crdwg/Atmosphere> ;
@@ -23,8 +33,13 @@ ev:precipitation qudt:unit qudt-unit:MilliM ;
         <https://w3id.org/ogc/crdwg/ev/measurementType/remote-sensing> ;
     ev:standardAuthority ev:GCOS .
 
-ev:soil-moisture skos:notation "SM" ;
-    skos:prefLabel "Soil Moisture" ;
+ev:soil-moisture skos:definition "Wassergehalt des Bodens."@de,
+        "Water content of the soil."@en,
+        "Contenido de agua del suelo."@es ;
+    skos:notation "SM" ;
+    skos:prefLabel "Bodenfeuchte"@de,
+        "Soil Moisture"@en,
+        "Humedad del suelo"@es ;
     skos:related ev:precipitation,
         ev:surface-air-temperature ;
     ev:evDomain <https://w3id.org/ogc/crdwg/Land> ;
@@ -33,8 +48,13 @@ ev:soil-moisture skos:notation "SM" ;
     ev:standardAuthority ev:GCOS .
 
 ev:surface-air-temperature qudt:unit qudt-unit:K ;
+    skos:definition "Temperatur der Luft in 2 m Höhe über der Oberfläche."@de,
+        "Temperature of the air at 2 m above the surface."@en,
+        "Temperatura del aire a 2 m sobre la superficie."@es ;
     skos:notation "T2m" ;
-    skos:prefLabel "Surface Air Temperature" ;
+    skos:prefLabel "Oberflächenlufttemperatur"@de,
+        "Surface Air Temperature"@en,
+        "Temperatura del aire en superficie"@es ;
     skos:related ev:precipitation,
         ev:sea-level,
         ev:soil-moisture ;

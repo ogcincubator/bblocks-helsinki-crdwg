@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "bblocks-helsinki-crdwg",
   "version": "0.1",
-  "dateOfLastChange": "2026-05-28",
+  "dateOfLastChange": "2026-06-03",
   "shaclShapes": {
     "ogc.sosa.properties.observation": [
       "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"

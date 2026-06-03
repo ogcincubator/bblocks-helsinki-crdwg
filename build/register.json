@@ -1,12 +1,12 @@
 {
   "name": "OGC CRDWG Essential Variable Blocks",
   "abstract": "OGC Building Blocks for the Climate Resilience Domain Working Group (CRDWG)\nEssential Variable registry. Provides schema, semantics, and ontology for\ndescribing and publishing Essential Climate Variables as linked data.\n",
-  "modified": "2026-05-28T09:16:24.506913",
+  "modified": "2026-06-03T08:59:59.212844",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"ccc2722ff09e6ff35b4415d9a62b15eb66c2dc45",
-      "shortCommitId": "\"ccc272",
-      "date": "2026-05-26T10:12:47+00:00\""
+      "commitId": "\"ad9a45b0f8be60a98bc10be85fef3d86f30f87c5",
+      "shortCommitId": "\"ad9a45",
+      "date": "2026-05-29T09:39:34+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-helsinki-crdwg",
@@ -29,7 +29,7 @@
       "itemClass": "schema",
       "register": "bblocks-helsinki-crdwg",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-28",
+      "dateOfLastChange": "2026-06-03",
       "sources": [
         {
           "title": "GCOS Essential Climate Variables",
@@ -72,7 +72,7 @@
       "itemClass": "model",
       "register": "bblocks-helsinki-crdwg",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-28",
+      "dateOfLastChange": "2026-06-03",
       "sources": [
         {
           "title": "GCOS Essential Climate Variables",
@@ -107,7 +107,7 @@
       "itemClass": "schema",
       "register": "bblocks-helsinki-crdwg",
       "version": "0.1",
-      "dateOfLastChange": "2026-05-28",
+      "dateOfLastChange": "2026-06-03",
       "shaclShapes": {
         "ogc.sosa.properties.observation": [
           "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
