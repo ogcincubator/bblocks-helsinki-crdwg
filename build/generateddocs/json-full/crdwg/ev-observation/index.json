@@ -9,13 +9,16 @@
   "itemClass": "schema",
   "register": "bblocks-helsinki-crdwg",
   "version": "0.1",
-  "dateOfLastChange": "2026-06-03",
+  "dateOfLastChange": "2026-09-16",
   "shaclShapes": {
-    "ogc.sosa.properties.observation": [
-      "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
-    ],
     "ogc.geo.features.feature": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ],
+    "ogc.sosa.properties.execution": [
+      "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/execution/shapes.shacl"
+    ],
+    "ogc.sosa.properties.observation": [
+      "https://opengeospatial.github.io/ogcapi-sosa/_sources/properties/observation/shapes.shacl"
     ]
   },
   "dependsOn": [
@@ -41,16 +44,19 @@
         {
           "language": "json",
           "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_1_1.json",
+          "sizeBytes": 316,
           "code": "{\n  \"type\": \"Feature\",\n  \"geometry\": { \"type\": \"Point\", \"coordinates\": [14.42, 50.08] },\n  \"properties\": {\n    \"observedProperty\": \"ev:surface-air-temperature\",\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": { \"value\": 308.2, \"uom\": \"qudt-unit:K\" },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}\n"
         },
         {
           "language": "jsonld",
           "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_1_1.jsonld",
+          "sizeBytes": 482,
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      14.42,\n      50.08\n    ]\n  },\n  \"properties\": {\n    \"observedProperty\": \"ev:surface-air-temperature\",\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": {\n      \"value\": 308.2,\n      \"uom\": \"qudt-unit:K\"\n    },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}"
         },
         {
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_1_1.ttl",
+          "sizeBytes": 560,
           "code": "@prefix ev: <https://w3id.org/ogc/crdwg/ev/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a geojson:Feature ;\n    sosa:hasResult [ ] ;\n    sosa:madeBySensor <sensor:prague-klementinum> ;\n    sosa:observedProperty ev:surface-air-temperature ;\n    sosa:resultTime \"2025-07-15T12:00:00Z\" ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.442e+01 5.008e+01 ) ] .\n\n"
         }
       ],
@@ -62,16 +68,19 @@
         {
           "language": "json",
           "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_2_1.json",
+          "sizeBytes": 466,
           "code": "{\n  \"type\": \"Feature\",\n  \"geometry\": { \"type\": \"Point\", \"coordinates\": [14.42, 50.08] },\n  \"properties\": {\n    \"observedProperty\": {\n      \"id\": \"ev:surface-air-temperature\",\n      \"name\": \"Surface Air Temperature\",\n      \"code\": \"T2m\",\n      \"domain\": \"Atmosphere\",\n      \"standardAuthority\": \"ev:GCOS\"\n    },\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": { \"value\": 308.2, \"uom\": \"qudt-unit:K\" },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}\n"
         },
         {
           "language": "jsonld",
           "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_2_1.jsonld",
+          "sizeBytes": 632,
           "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/annotated/crdwg/ev-observation/context.jsonld\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      14.42,\n      50.08\n    ]\n  },\n  \"properties\": {\n    \"observedProperty\": {\n      \"id\": \"ev:surface-air-temperature\",\n      \"name\": \"Surface Air Temperature\",\n      \"code\": \"T2m\",\n      \"domain\": \"Atmosphere\",\n      \"standardAuthority\": \"ev:GCOS\"\n    },\n    \"resultTime\": \"2025-07-15T12:00:00Z\",\n    \"hasResult\": {\n      \"value\": 308.2,\n      \"uom\": \"qudt-unit:K\"\n    },\n    \"madeBySensor\": \"sensor:prague-klementinum\"\n  }\n}"
         },
         {
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-helsinki-crdwg/build/tests/crdwg/ev-observation/example_2_1.ttl",
+          "sizeBytes": 560,
           "code": "@prefix ev: <https://w3id.org/ogc/crdwg/ev/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sosa: <http://www.w3.org/ns/sosa/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a geojson:Feature ;\n    sosa:hasResult [ ] ;\n    sosa:madeBySensor <sensor:prague-klementinum> ;\n    sosa:observedProperty ev:surface-air-temperature ;\n    sosa:resultTime \"2025-07-15T12:00:00Z\" ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( 1.442e+01 5.008e+01 ) ] .\n\n"
         }
       ],
