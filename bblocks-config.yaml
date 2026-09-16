@@ -8,7 +8,7 @@ identifier-prefix: ogc.crdwg.
 
 imports:
   - default
-  - https://opengeospatial.github.io/ogcapi-sosa/build/register.json
+  - '@ogc/ogcapi-sosa'
 
 # sparql:  # TODO: enable once a real Fuseki endpoint is available
 #   push:  https://defs.example.org/fuseki/data
